@@ -1,0 +1,36 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<img class="login-bg" src="{{iconPath}}bg-image-1.jpg" alt="">
+
+<ion-content padding>
+ 
+  <ion-list login>
+    <div class="login-main">
+      <img src="{{iconPath}}digibank-logo.png" alt="app_logo" />
+    </div>
+    <ion-item>
+      <ion-label floating>Mobile/Email</ion-label>
+      <ion-input type="text" [(ngModel)]="userId"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <div class="login-center">
+      <button ion-button round (click)="doLogin()">Login</button>
+    </div>
+    <div class="finger-print-container">
+        <ion-icon name="finger-print"></ion-icon>
+    </div>
+    <div class="login-footer">
+     <ion-label item-start>Forgot <span class="txt"> Username</span>/<span class="txt">Password</span>?</ion-label>
+     <ion-label item-end>New here? <span class="txt">SIGN UP</span></ion-label>
+    </div>
+  </ion-list>
+</ion-content>

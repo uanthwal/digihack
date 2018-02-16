@@ -1,0 +1,822 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+// @import "../../@angular/material/prebuilt-themes/indigo-pink";
+.tabbar a[aria-selected=true] {
+    border-top: 2px;
+    border-style: solid;    
+}
+[status] {
+    background-color: transparent;
+    font-size: 12px;
+    padding: 0;
+}
+
+[status="RECEIVED"] {
+    color: #ffcc00;
+}
+
+[status="STITCHING"] {
+    color: #6633ff;
+}
+
+[status="READY"] {
+    color: #ff00ff;
+}
+
+[status="DELIVERED"] {
+    color: #32CD32;
+}
+
+.pagination {
+    font-size: 14px;
+}
+
+.bar-button-md[prev],
+.bar-button-md[next] {
+    margin-right: 12px;
+    font-size: 1.7rem;
+}
+
+$named-colors: 'AliceBlue', 'AntiqueWhite', 'Aqua', 'Aquamarine', 'Azure', 'Beige', 'Bisque', 'Black', 'BlanchedAlmond', 'Blue', 'BlueViolet', 'Brown', 'BurlyWood', 'CadetBlue', 'Chartreuse', 'Chocolate', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Crimson', 'Cyan', 'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGrey', 'DarkGreen', 'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'Darkorange', 'DarkOrchid', 'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray', 'DarkSlateGrey', 'DarkTurquoise', 'DarkViolet', 'DeepPink', 'DeepSkyBlue', 'DimGray', 'DimGrey', 'DodgerBlue', 'FireBrick', 'FloralWhite', 'ForestGreen', 'Fuchsia', 'Gainsboro', 'GhostWhite', 'Gold', 'GoldenRod', 'Gray', 'Grey', 'Green', 'GreenYellow', 'HoneyDew', 'HotPink', 'IndianRed', 'Indigo', 'Ivory', 'Khaki', 'Lavender', 'LavenderBlush', 'LawnGreen', 'LemonChiffon', 'LightBlue', 'LightCoral', 'LightCyan', 'LightGoldenRodYellow', 'LightGray', 'LightGrey', 'LightGreen', 'LightPink', 'LightSalmon', 'LightSeaGreen', 'LightSkyBlue', 'LightSlateGray', 'LightSlateGrey', 'LightSteelBlue', 'LightYellow', 'Lime', 'LimeGreen', 'Linen', 'Magenta', 'Maroon', 'MediumAquaMarine', 'MediumBlue', 'MediumOrchid', 'MediumPurple', 'MediumSeaGreen', 'MediumSlateBlue', 'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'MidnightBlue', 'MintCream', 'MistyRose', 'Moccasin', 'NavajoWhite', 'Navy', 'OldLace', 'Olive', 'OliveDrab', 'Orange', 'OrangeRed', 'Orchid', 'PaleGoldenRod', 'PaleGreen', 'PaleTurquoise', 'PaleVioletRed', 'PapayaWhip', 'PeachPuff', 'Peru', 'Pink', 'Plum', 'PowderBlue', 'Purple', 'Red', 'RosyBrown', 'RoyalBlue', 'SaddleBrown', 'Salmon', 'SandyBrown', 'SeaGreen', 'SeaShell', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue', 'SlateGray', 'SlateGrey', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato', 'Turquoise', 'Violet', 'Wheat', 'White', 'WhiteSmoke', 'Yellow', 'YellowGreen';
+
+@for $i from 1 through length($named-colors) { 
+  
+  $red: random(256)-1;
+  $green: random(256)-1;
+  $blue: random(256)-1;
+  
+  $alpha: random(100)/100;
+  
+  .avatar-#{$i} { 
+    color: #fff;
+    background-color: unquote(nth($named-colors, $i));
+  }
+}
+.side-menu-icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+ion-label {
+    display: flex;
+    align-items: center;
+  }
+.avtr {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: #333333;
+    color: #eeeeee;
+
+    &--1 {
+        background-color: #000033;
+    }
+    &--2 {
+        background-color: #000066;
+    }
+    &--3 {
+        background-color: #000099;
+    }
+    &--4 {
+        background-color: #0000cc;
+    }
+    &--5 {
+        background-color: #0000ff;
+    }
+    &--6 {
+        background-color: #003300;
+    }
+    &--7 {
+        background-color: #003333;
+    }
+    &--8 {
+        background-color: #003366;
+    }
+    &--9 {
+        background-color: #003399;
+    }
+    &--10 {
+        background-color: #0033cc;
+    }
+    &--11 {
+        background-color: #0033ff;
+    }
+    &--12 {
+        background-color: #006600;
+    }
+    &--13 {
+        background-color: #006633;
+    }
+    &--14 {
+        background-color: #006666;
+    }
+    &--15 {
+        background-color: #006699;
+    }
+    &--16 {
+        background-color: #0066cc;
+    }
+    &--17 {
+        background-color: #0066ff;
+    }
+    &--18 {
+        background-color: #009900;
+    }
+    &--19 {
+        background-color: #009933;
+    }
+    &--20 {
+        background-color: #009966;
+    }
+    &--21 {
+        background-color: #009999;
+    }
+    &--22 {
+        background-color: #0099cc;
+    }
+    &--23 {
+        background-color: #0099ff;
+    }
+    &--24 {
+        background-color: #00cc00;
+        color: #333333;
+    }
+    &--25 {
+        background-color: #00cc33;
+        color: #333333;
+    }
+    &--26 {
+        background-color: #00cc66;
+        color: #333333;
+    }
+    &--27 {
+        background-color: #00cc99;
+        color: #333333;
+    }
+    &--28 {
+        background-color: #00cccc;
+        color: #333333;
+    }
+    &--29 {
+        background-color: #00ccff;
+        color: #333333;
+    }
+    &--30 {
+        background-color: #00ff00;
+        color: #333333;
+    }
+    &--31 {
+        background-color: #00ff33;
+        color: #333333;
+    }
+    &--32 {
+        background-color: #00ff66;
+            color: #333333;
+    }
+    &--33 {
+        background-color: #00ff99;
+        color: #333333;
+    }
+    &--34 {
+        background-color: #00ffcc;
+        color: #333333;
+    }
+    &--35 {
+        background-color: #00ffff;
+        color: #333333;
+    }
+    &--36 {
+        background-color: #330000;
+    }
+    &--37 {
+        background-color: #330033;
+    }
+    &--38 {
+        background-color: #330066;
+    }
+    &--39 {
+        background-color: #330099;
+    }
+    &--40 {
+        background-color: #3300cc;
+    }
+    &--41 {
+        background-color: #3300ff;
+    }
+    &--42 {
+        background-color: #333300;
+    }
+    &--43 {
+        background-color: #333333;
+    }
+    &--44 {
+        background-color: #333366;
+    }
+    &--45 {
+        background-color: #333399;
+    }
+    &--46 {
+        background-color: #3333cc;
+    }
+    &--47 {
+        background-color: #3333ff;
+    }
+    &--48 {
+        background-color: #336600;
+    }
+    &--49 {
+        background-color: #336633;
+    }
+    &--50 {
+        background-color: #336666;
+    }
+    &--51 {
+        background-color: #336699;
+    }
+    &--52 {
+        background-color: #3366cc;
+    }
+    &--53 {
+        background-color: #3366ff;
+    }
+    &--54 {
+        background-color: #339900;
+    }
+    &--55 {
+        background-color: #339933;
+    }
+    &--56 {
+        background-color: #339966;
+    }
+    &--57 {
+        background-color: #339999;
+    }
+    &--58 {
+        background-color: #3399cc;
+    }
+    &--59 {
+        background-color: #3399ff;
+    }
+    &--60 {
+        background-color: #33cc00;
+        color: #333333;
+    }
+    &--61 {
+        background-color: #33cc33;
+        color: #333333;
+    }
+    &--62 {
+        background-color: #33cc66;
+        color: #333333;
+    }
+    &--63 {
+        background-color: #33cc99;
+        color: #333333;
+    }
+    &--64 {
+        background-color: #33cccc;
+        color: #333333;
+    }
+    &--65 {
+        background-color: #33ccff;
+        color: #333333;
+    }
+    &--66 {
+        background-color: #33ff00;
+        color: #333333;
+    }
+    &--67 {
+        background-color: #33ff33;
+        color: #333333;
+    }
+    &--68 {
+        background-color: #33ff66;
+        color: #333333;
+    }
+    &--69 {
+        background-color: #33ff99;
+        color: #333333;
+    }
+    &--70 {
+        background-color: #33ffcc;
+        color: #333333;
+    }
+    &--71 {
+        background-color: #33ffff;
+        color: #333333;
+    }
+    &--72 {
+        background-color: #660000;
+    }
+    &--73 {
+        background-color: #660033;
+    }
+    &--74 {
+        background-color: #660066;
+    }
+    &--75 {
+        background-color: #660099;
+    }
+    &--76 {
+        background-color: #6600cc;
+    }
+    &--77 {
+        background-color: #6600ff;
+    }
+    &--78 {
+        background-color: #663300;
+    }
+    &--79 {
+        background-color: #663333;
+    }
+    &--80 {
+        background-color: #663366;
+    }
+    &--81 {
+        background-color: #663399;
+    }
+    &--82 {
+        background-color: #6633cc;
+    }
+    &--83 {
+        background-color: #6633ff;
+    }
+    &--84 {
+        background-color: #666600;
+    }
+    &--85 {
+        background-color: #666633;
+    }
+    &--86 {
+        background-color: #666666;
+    }
+    &--87 {
+        background-color: #666699;
+    }
+    &--88 {
+        background-color: #6666cc;
+    }
+    &--89 {
+        background-color: #6666ff;
+    }
+    &--90 {
+        background-color: #669900;
+    }
+    &--91 {
+        background-color: #669933;
+    }
+    &--92 {
+        background-color: #669966;
+    }
+    &--93 {
+        background-color: #669999;
+    }
+    &--94 {
+        background-color: #6699cc;
+    }
+    &--95 {
+        background-color: #6699ff;
+    }
+    &--96 {
+        background-color: #66cc00;
+        color: #333333;
+    }
+    &--97 {
+        background-color: #66cc33;
+        color: #333333;
+    }
+    &--98 {
+        background-color: #66cc66;
+        color: #333333;
+    }
+    &--99 {
+        background-color: #66cc99;
+        color: #333333;
+    }
+    &--100 {
+        background-color: #66cccc;
+        color: #333333;
+    }
+    &--101 {
+        background-color: #66ccff;
+        color: #333333;
+    }
+    &--102 {
+        background-color: #66ff00;
+        color: #333333;
+    }
+    &--103 {
+        background-color: #66ff33;
+        color: #333333;
+    }
+    &--104 {
+        background-color: #66ff66;
+        color: #333333;
+    }
+    &--105 {
+        background-color: #66ff99;
+        color: #333333;
+    }
+    &--106 {
+        background-color: #66ffcc;
+        color: #333333;
+    }
+    &--107 {
+        background-color: #66ffff;
+        color: #333333;
+    }
+    &--108 {
+        background-color: #990000;
+    }
+    &--109 {
+        background-color: #990033;
+    }
+    &--110 {
+        background-color: #990066;
+    }
+    &--111 {
+        background-color: #990099;
+    }
+    &--112 {
+        background-color: #9900cc;
+    }
+    &--113 {
+        background-color: #9900ff;
+    }
+    &--114 {
+        background-color: #993300;
+    }
+    &--115 {
+        background-color: #993333;
+    }
+    &--116 {
+        background-color: #993366;
+    }
+    &--117 {
+        background-color: #993399;
+    }
+    &--118 {
+        background-color: #9933cc;
+    }
+    &--119 {
+        background-color: #9933ff;
+    }
+    &--120 {
+        background-color: #996600;
+    }
+    &--121 {
+        background-color: #996633;
+    }
+    &--122 {
+        background-color: #996666;
+    }
+    &--123 {
+        background-color: #996699;
+    }
+    &--124 {
+        background-color: #9966cc;
+    }
+    &--125 {
+        background-color: #9966ff;
+    }
+    &--126 {
+        background-color: #999900;
+    }
+    &--127 {
+        background-color: #999933;
+    }
+    &--128 {
+        background-color: #999966;
+    }
+    &--129 {
+        background-color: #999999;
+    }
+    &--130 {
+        background-color: #9999cc;
+    }
+    &--131 {
+        background-color: #9999ff;
+    }
+    &--132 {
+        background-color: #99cc00;
+        color: #333333;
+    }
+    &--133 {
+        background-color: #99cc33;
+        color: #333333;
+    }
+    &--134 {
+        background-color: #99cc66;
+        color: #333333;
+    }
+    &--135 {
+        background-color: #99cc99;
+        color: #333333;
+    }
+    &--136 {
+        background-color: #99cccc;
+        color: #333333;
+    }
+    &--137 {
+        background-color: #99ccff;
+        color: #333333;
+    }
+    &--138 {
+        background-color: #99ff00;
+        color: #333333;
+    }
+    &--139 {
+        background-color: #99ff33;
+        color: #333333;
+    }
+    &--140 {
+        background-color: #99ff66;
+        color: #333333;
+    }
+    &--141 {
+        background-color: #99ff99;
+        color: #333333;
+    }
+    &--142 {
+        background-color: #99ffcc;
+        color: #333333;
+    }
+    &--143 {
+        background-color: #99ffff;
+        color: #333333;
+    }
+    &--144 {
+        background-color: #cc0000;
+    }
+    &--145 {
+        background-color: #cc0033;
+    }
+    &--146 {
+        background-color: #cc0066;
+    }
+    &--147 {
+        background-color: #cc0099;
+    }
+    &--148 {
+        background-color: #cc00cc;
+    }
+    &--149 {
+        background-color: #cc00ff;
+    }
+    &--150 {
+        background-color: #cc3300;
+    }
+    &--151 {
+        background-color: #cc3333;
+    }
+    &--152 {
+        background-color: #cc3366;
+    }
+    &--153 {
+        background-color: #cc3399;
+    }
+    &--154 {
+        background-color: #cc33cc;
+    }
+    &--155 {
+        background-color: #cc33ff;
+    }
+    &--156 {
+        background-color: #cc6600;
+    }
+    &--157 {
+        background-color: #cc6633;
+    }
+    &--158 {
+        background-color: #cc6666;
+    }
+    &--159 {
+        background-color: #cc6699;
+    }
+    &--160 {
+        background-color: #cc66cc;
+    }
+    &--161 {
+        background-color: #cc66ff;
+    }
+    &--162 {
+        background-color: #cc9900;
+    }
+    &--163 {
+        background-color: #cc9933;
+    }
+    &--164 {
+        background-color: #cc9966;
+    }
+    &--165 {
+        background-color: #cc9999;
+    }
+    &--166 {
+        background-color: #cc99cc;
+    }
+    &--167 {
+        background-color: #cc99ff;
+    }
+    &--168 {
+        background-color: #cccc00;
+        color: #333333;
+    }
+    &--169 {
+        background-color: #cccc33;
+        color: #333333;
+    }
+    &--170 {
+        background-color: #cccc66;
+        color: #333333;
+    }
+    &--171 {
+        background-color: #cccc99;
+        color: #333333;
+    }
+    &--172 {
+        background-color: #cccccc;
+        color: #333333;
+    }
+    &--173 {
+        background-color: #ccccff;
+        color: #333333;
+    }
+    &--174 {
+        background-color: #ccff00;
+        color: #333333;
+    }
+    &--175 {
+        background-color: #ccff33;
+        color: #333333;
+    }
+    &--176 {
+        background-color: #ccff66;
+        color: #333333;
+    }
+    &--177 {
+        background-color: #ccff99;
+        color: #333333;
+    }
+    &--178 {
+        background-color: #ccffcc;
+        color: #333333;
+    }
+    &--179 {
+        background-color: #ccffff;
+        color: #333333;
+    }
+    &--180 {
+        background-color: #ff0000;
+    }
+    &--181 {
+        background-color: #ff0033;
+    }
+    &--182 {
+        background-color: #ff0066;
+    }
+    &--183 {
+        background-color: #ff0099;
+    }
+    &--184 {
+        background-color: #ff00cc;
+    }
+    &--185 {
+        background-color: #ff00ff;
+    }
+    &--186 {
+        background-color: #ff3300;
+    }
+    &--187 {
+        background-color: #ff3333;
+    }
+    &--188 {
+        background-color: #ff3366;
+    }
+    &--189 {
+        background-color: #ff3399;
+    }
+    &--190 {
+        background-color: #ff33cc;
+    }
+    &--191 {
+        background-color: #ff33ff;
+    }
+    &--192 {
+        background-color: #ff6600;
+    }
+    &--193 {
+        background-color: #ff6633;
+    }
+    &--194 {
+        background-color: #ff6666;
+    }
+    &--195 {
+        background-color: #ff6699;
+    }
+    &--196 {
+        background-color: #ff66cc;
+    }
+    &--197 {
+        background-color: #ff66ff;
+    }
+    &--198 {
+        background-color: #ff9900;
+        color: #333333;
+    }
+    &--199 {
+        background-color: #ff9933;
+        color: #333333;
+    }
+    &--200 {
+        background-color: #ff9966;
+        color: #333333;
+    }
+    &--201 {
+        background-color: #ff9999;
+        color: #333333;
+    }
+    &--202 {
+        background-color: #ff99cc;
+        color: #333333;
+    }
+    &--203 {
+        background-color: #ff99ff;
+        color: #333333;
+    }
+    &--204 {
+        background-color: #ffcc00;
+        color: #333333;
+    }
+    &--205 {
+        background-color: #ffcc33;
+        color: #333333;
+    }
+    &--206 {
+        background-color: #ffcc66;
+        color: #333333;
+    }
+    &--207 {
+        background-color: #ffcc99;
+        color: #333333;
+    }
+    &--208 {
+        background-color: #ffcccc;
+        color: #333333;
+    }
+    &--209 {
+        background-color: #ffccff;
+        color: #333333;
+    }
+    &--210 {
+        background-color: #ffff00;
+        color: #333333;
+    }
+    &--211 {
+        background-color: #ffff33;
+        color: #333333;
+    }
+    &--212 {
+        background-color: #ffff66;
+        color: #333333;
+    }
+    &--213 {
+        background-color: #ffff99;
+        color: #333333;
+    }
+    &--214 {
+        background-color: #ffffcc;
+        color: #333333;
+    }
+    &--215 {
+        background-color: #ffffff;
+        color: #333333;
+    }
+}

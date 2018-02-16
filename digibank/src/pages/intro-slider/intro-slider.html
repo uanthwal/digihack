@@ -1,0 +1,59 @@
+<ion-content>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+    <ion-slide data-id="s-1">
+      <img class="slide-bg" src="{{slideStyles[0].bgcolor}}"/>
+      <div class="slide-image-block">
+        <div class="circle" [style.background]="slideStyles[0].circle">
+          <img src="{{imgPath}}slide-1-bg.png" alt="bg"/>
+        </div>
+        <img class="slide-image" src="{{imgPath}}digibank-logo.png" alt="" [@bounce]='state' (@bounce.done)="animationDone()">
+      </div>
+      <div [@bounce]='state'>
+        <h2 class="slide-title">Welcome to digibank!</h2>
+        <p class="slide-desc">A whole new way of banking brought to you by DBS Bank. Singapore's best and Asia's safest bank.</p>
+      </div>
+
+    </ion-slide>
+
+    <ion-slide [style.background]="slideStyles[1].bgcolor" data-id="s-2">
+        <img class="slide-bg" src="{{slideStyles[1].bgcolor}}"/>
+      <div class="slide-image-block">
+        <div class="circle" [style.background]="slideStyles[1].circle"></div>
+        <img class="slide-image" src="{{imgPath}}digibank-logo.png" alt="" [@bounce]='state'>
+      </div>
+      <div [@bounce]='state'>
+        <h2 class="slide-title">Welcome to digibank!</h2>
+        <p class="slide-desc">A whole new way of banking brought to you by DBS Bank. Singapore's best and Asia's safest bank.</p>
+      </div>
+    </ion-slide>
+    <ion-slide [style.background]="slideStyles[2].bgcolor" data-id="s-3">
+        <img class="slide-bg" src="{{slideStyles[2].bgcolor}}"/>
+      <div class="slide-image-block">
+        <div class="circle" [style.background]="slideStyles[2].circle"></div>
+        <img class="slide-image" src="{{imgPath}}digibank-logo.png" alt="" [@bounce]='state'>
+      </div>
+      <div [@bounce]='state'>
+        <h2 class="slide-title">Welcome to digibank!</h2>
+        <p class="slide-desc">A whole new way of banking brought to you by DBS Bank. Singapore's best and Asia's safest bank.</p>
+      </div>
+    </ion-slide>
+    <ion-slide [style.background]="slideStyles[3].bgcolor" data-id="s-4">
+        <img class="slide-bg" src="{{slideStyles[3].bgcolor}}"/>
+      <div class="slide-image-block">
+        <div class="circle" [style.background]="slideStyles[3].circle"></div>
+        <img class="slide-image" src="{{imgPath}}digibank-logo.png" alt="" [@bounce]='state'>
+      </div>
+      <div [@bounce]='state'>
+        <h2 class="slide-title">Welcome to digibank!</h2>
+        <p class="slide-desc">A whole new way of banking brought to you by DBS Bank. Singapore's best and Asia's safest bank.</p>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+  <div class="skip-btn" *ngIf="displaySkip">
+    <button ion-button [style.color]="skipButtonStyles.color" [style.border-color]="skipButtonStyles.color" (click)="onClickSkip()">SKIP</button>
+  </div>
+  <div class="skip-btn" *ngIf="!displaySkip">
+      <button ion-button [style.color]="skipButtonStyles.color" [style.border-color]="skipButtonStyles.color" (click)="onClickGettingStarted()">LET'S START</button>
+    </div>
+</ion-content>
