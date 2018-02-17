@@ -71,7 +71,8 @@ export class RemindersPage {
   </div>
   <div class="block">
     <p>Frequency</p>
-    <div *ngFor="let f of frequency" class="chip" (click)="onClickChip(f)">
+    <div *ngFor="let f of frequency" class="chip" 
+      [class.is-active]="f.isActive" (click)="onClickChip(f)">
       {{f.name}}
     </div>
   </div>
@@ -112,7 +113,14 @@ export class AddNewRemindersPage {
     {id:'bank', name:'Upendra', data: 'XXXX XXXX 1508', icon:'fa-bank'},
     {id:'contact', name:'Prakash Gupta', data:'8886299905', icon:'fa-contact'}
   ];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.frequency = this.frequency.map(t => {
+      t.isActive = false;
+      return t;
+    });
+
+    this.frequency[0].isActive = true;
+  }
  
   dataSelected = false;
   amount;
@@ -127,8 +135,11 @@ export class AddNewRemindersPage {
     this.dataSelected = true;
   }
 
-  onClickChip(f?) {
-    this.freqSelected = f;
+  onClickChip( frequency ) {
+    this.freqSelected = frequency;
+    const index = this.frequency.indexOf(frequency);
+    this.frequency.forEach(t => t.isActive = false);
+    this.frequency[index].isActive = true;
   }
 
   onCickSave() {

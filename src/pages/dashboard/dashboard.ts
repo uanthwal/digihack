@@ -1,8 +1,8 @@
 /*
  * @Author: Rajkeshwar Prasad (rajkeshwar.pd@gmail.com) 
  * @Date: 2018-02-17 15:05:40 
- * @Last Modified by:   rajkeshwar.pd@gmail.com 
- * @Last Modified time: 2018-02-17 15:05:40 
+ * @Last Modified by: rajkeshwar.pd@gmail.com
+ * @Last Modified time: 2018-02-18 02:56:06
  */
 import { ChatBotPage } from './../chat-bot/chat-bot';
 import { TransactionsPage } from './../transactions/transactions';
@@ -28,14 +28,7 @@ import { HomePage } from '../home/home';
 })
 export class DashboardPage {
 
-  public tab1: any;
-  public tab2: any;
-  public tab3: any;
-
   constructor(public navCtrl: NavController) {
-    this.tab1 = AddMoneyPage;
-    this.tab2 = TransferPage;
-    this.tab3 = QrCodePage;
   }
 
   public tabMenus = [

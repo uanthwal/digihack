@@ -14,6 +14,60 @@
 
 
 <ion-content padding>
-  <div></div>
+  <ion-segment [(ngModel)]="rechargeType">
+    <ion-segment-button value="prepaid">
+      Prepaid
+    </ion-segment-button>
+    <ion-segment-button value="postpaid">
+      Postpaid
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="tab-content" [ngSwitch]="rechargeType">
+    <ion-list *ngSwitchCase="'prepaid'">
+      <ion-item>
+        <ion-label floating>Mobile Number</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Current Operator</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Total Amount</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <p class="center">
+        <button ion-button color="secondary" round>Procceed to recharge</button>
+      </p>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'postpaid'">
+      <ion-item>
+        <ion-label floating>Mobile Number</ion-label>
+        <ion-input type="number"></ion-input>
+        <i class="fa fa-address-book"></i>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Current Operator</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Total Amount</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+
+      <p class="center">
+        <button ion-button color="secondary" round>Procceed to pay bills</button>
+      </p>
+
+    </ion-list>
+
+  </div>
 
 </ion-content>

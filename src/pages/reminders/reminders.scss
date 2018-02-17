@@ -31,7 +31,7 @@ page-reminders .scroll-content {
   textarea {
     height: 100px;
     width: 96%;
-    border-radius: 5px;
+    border: 1px solid #ccc;
   }
   .user-info {
     display: flex;
@@ -67,7 +67,7 @@ page-reminders .scroll-content {
 .chip {
   display: inline-block;
   padding: 5px 14px;
-  border: 1px solid black;
+  border: 1px solid lighten(#000, 30%);
   border-radius: 15px;
   margin: 5px 5px;
   width: auto;
@@ -136,4 +136,10 @@ ion-footer {
   border-radius: 0;
   padding: 0px 10px;
   height: 25px;
+}
+
+.is-active {
+  background: #32DB64;
+  color: #fff;
+  border: darken(#32DB64, 10%);
 }
