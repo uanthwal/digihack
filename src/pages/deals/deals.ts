@@ -1,3 +1,9 @@
+/*
+ * @Author: Rajkeshwar Prasad (rajkeshwar.pd@gmail.com) 
+ * @Date: 2018-02-17 15:05:49 
+ * @Last Modified by:   rajkeshwar.pd@gmail.com 
+ * @Last Modified time: 2018-02-17 15:05:49 
+ */
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
