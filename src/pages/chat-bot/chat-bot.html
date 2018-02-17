@@ -6,13 +6,29 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>ChatBot</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>ChatBot</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <div class="display-section">
+        <div class="chat" *ngFor="let chat of chatHistory">
+            <div class="question">
+                <div class="profile fa fa-user"></div>
+                <div class="result" [innerHtml]="chat.q"></div>
+            </div>
+            <div class="answer">
+                <div class="profile fa fa-user"></div>
+                <div class="result" [innerHtml]="chat.q"></div>
+            </div>
 
+        </div>
+    </div>
+    <div class="input-section">
+        <input [(ngModel)]="askQuery" />
+        <button (click)="submitQuery()" class="fa fa-caret-right">Submit</button>
+    </div>
 </ion-content>

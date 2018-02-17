@@ -17,14 +17,15 @@
     <div *ngIf="requestCount === 0">
         <div class="summary-section">
             <ion-item class="display-full">
-                <ion-label>Account</ion-label>
+                <ion-label style="width: 100%; max-width:100%">Account</ion-label>
                 <ion-select style="max-width:100%" [(ngModel)]="selectedAccount">
                     <ion-option *ngFor="let account of allAccount" value="{{account}}">{{account}}</ion-option>
                 </ion-select>
             </ion-item>
-            <ion-item class="display-full">
-                <ion-label>Available Balance</ion-label>
-                <ion-label>{{selectedTransictionDetails.currency}} {{selectedTransictionDetails.accountnumber | number:'.2-2'}}</ion-label>
+            <ion-item>
+                <ion-label style="width: 100%; max-width:100%">Available Balance</ion-label>
+                <!--{{selectedTransictionDetails.currency}}-->
+                <ion-label style="width: 100%; max-width:100%" class="fa fa-inr"> {{selectedTransictionDetails.availablebalance | number:'.2-2'}}</ion-label>
             </ion-item>
         </div>
         <div class="chart-section"></div>

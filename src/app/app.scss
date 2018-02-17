@@ -962,19 +962,3 @@ ion-label {
         color: #333333;
     }
 }
-
-page-transactions {
-    .display-flex-column {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        .input-wrapper>* {
-            flex: 1;
-        }
-    }
-    .display-full>.input-wrapper {
-        >* {
-            width: 100%;
-        }
-    }
-}
