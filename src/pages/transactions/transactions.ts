@@ -26,12 +26,17 @@ public userTransactionDetails: any;
   public selectedTransictionDetails: any = {};
 
   public allAccount: any[];
+  public showTransaction: boolean = false;
 
   public requestCount: number = 0;
-
+  
   // Doughnut
-  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-  public doughnutChartData:number[] = [350, 450, 100];
+  public doughnutChartLabels:string[] = [];
+  public doughnutChartData:number[] = [];
+    public doughnutChartLabelsC:string[] = [];
+  public doughnutChartDataC:number[] = [];
+    public doughnutChartLabelsD:string[] = [];
+  public doughnutChartDataD:number[] = [];
   public doughnutChartType:string = 'doughnut';
 
   constructor(
@@ -48,6 +53,8 @@ public userTransactionDetails: any;
           this.allAccount = this.userTransactionDetails.map(acc => acc.accountnumber);
           this.selectedAccount = this.allAccount[0];
           this.selectedTransictionDetails = JSON.parse(JSON.stringify(this.userTransactionDetails[0]));
+          this.showTransaction = this.selectedTransictionDetails.transaction.length > 0;
+          this.onTransactionTypeChange(this.transactionType);
           this.requestCount--;
           
       });
@@ -66,6 +73,7 @@ public userTransactionDetails: any;
     console.log("valueChange",valueChange);
     let acc = this.userTransactionDetails.find(account => account.accountnumber == valueChange);
     this.selectedTransictionDetails = JSON.parse(JSON.stringify(acc));
+    this.showTransaction = this.selectedTransictionDetails.transaction.length > 0;
   }
 
     // events
@@ -75,6 +83,54 @@ public userTransactionDetails: any;
  
   public chartHovered(e:any):void {
     console.log(e);
+  }
+
+  public onTransactionTypeChange(trType: string) {
+    switch (trType) {
+      case 'credit':
+      this.doughnutChartLabelsC = this.selectedTransictionDetails.transaction
+                                    .filter(tranType => tranType.type == 'c')
+                                    .map(tranCategory => tranCategory.category);
+      this.doughnutChartDataC = []; 
+            this.doughnutChartLabelsC.forEach(label => {
+        let total = this.selectedTransictionDetails.transaction
+                    .filter(tranType => tranType.category == label)
+                    .reduce((a, b) => a + b.amount, 0);
+                    this.doughnutChartDataC.push(total);
+                    // label = label + '(' + total +  ')';
+      });
+      // hack
+      // this.doughnutChartLabelsC = this.doughnutChartLabelsC.map((label, index) => label  + '(' + this.doughnutChartDataC[index] +  ')' );
+      break;
+      case 'debit':
+      this.doughnutChartLabelsD = this.selectedTransictionDetails.transaction
+                                    .filter(tranType => tranType.type == 'd')
+                                    .map(tranCategory => tranCategory.category);
+      this.doughnutChartDataD = []; 
+      this.doughnutChartLabelsD.forEach(label => {
+        let total = this.selectedTransictionDetails.transaction
+                    .filter(tranType => tranType.category == label)
+                    .reduce((a, b) => a + b.amount, 0);
+                    this.doughnutChartDataD.push(total);
+      });
+// hack
+      // this.doughnutChartLabelsD = this.doughnutChartLabelsD.map((label, index) => label  + '(' + this.doughnutChartDataD[index] +  ')' );
+      break;
+      default:
+      this.doughnutChartLabels = ['Credit', 'Debit'];
+      this.doughnutChartData = [];
+      this.doughnutChartLabels.forEach(label => {
+        let total = this.selectedTransictionDetails.transaction
+                    .filter(tranType => tranType.category == label)
+                    .reduce((a, b) => a + b.amount, 0);
+                    this.doughnutChartData.push(total);
+      });
+// hack
+      // this.doughnutChartLabels = this.doughnutChartLabels.map((label, index) => label  + '(' + this.doughnutChartData[index] +  ')' );
+    }
+
+    this.transactionType = trType;
+
   }
 
 }

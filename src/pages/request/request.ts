@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { URL_CONFIG } from '../../app/app.config';
+import { RequestDetailPage } from './request-detail';
 
 /**
  * Generated class for the RequestPage page.
@@ -123,71 +124,4 @@ export class RequestPage {
 }
 
 
-@Component({
-  selector: "page-request-detail",
-  template: `<!--
-  Generated template for the RemindersPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Request Money</ion-title>
-  </ion-navbar>
-</ion-header>
-
-
-<ion-content padding>
-<div class="block">
-<div class="user-info" *ngIf="sendToUserData?.type == 'upi_id'">
-<span class="name-icon">{{sendToUserData?.initials}}</span>
-<div class="name">
-  <p class="c-name">{{sendToUserData?.name}}</p>
-  <p class="c-num">{{sendToUserData?.upi_add}}</p>
-</div>
-</div>  
-    
-  </div>
-  <div class="block">
-<div class="user-info" *ngIf="sendToUserData?.type == 'contact'">
-<span class="name-icon">{{sendToUserData?.initials}}</span>
-<div class="name">
-  <p class="c-name">{{sendToUserData?.name}}</p>
-  <p class="c-num">{{sendToUserData?.contact_number}}</p>
-</div>
-</div>  
-  </div>
-  
-  <div class="block">
-    <i class="fa fa-inr fa-icon"></i>
-    <input class="amt-input" type="number" placeholder="Enter Amount" [(ngModel)]="amount"/>
-  </div>
-   
-  <div class="block">
-    <textarea id="remarks" [(ngModel)]="remarks">Remarks (optional) </textarea>
-  </div>
-  <ion-footer>
-         <button ion-button round (click)="onClickRequest()">REQUEST</button>
-    </ion-footer>
-</ion-content>`,
-  encapsulation: ViewEncapsulation.None
-})
-export class RequestDetailPage {
-  iconPath = URL_CONFIG.ICON_ASSETS_PATH;
-  sendToUserData;
-  remarks;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad TransferPage", this.navParams.get("navParams"));
-    this.sendToUserData = this.navParams.get("navParams");
-  }
-
-  onClickRequest() {
-
-  }
-}
 

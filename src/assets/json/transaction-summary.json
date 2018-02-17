@@ -43,19 +43,27 @@
                 "transactionDate": 1518863213065
             },
             {
-                "id": 1,
+                "id": 7,
                 "type": "c",
-                "amount": 10,
+                "amount": 100,
                 "category": "Food",
                 "comment": "Snack",
                 "transactionDate": 1518863213065
             },
             {
-                "id": 1,
+                "id": 8,
                 "type": "c",
-                "amount": 10,
+                "amount": 1000,
                 "category": "Food",
                 "comment": "Snack",
+                "transactionDate": 1518863213065
+            },
+            {
+                "id": 9,
+                "type": "d",
+                "amount": 10000,
+                "category": "Transfer",
+                "comment": "My Dad",
                 "transactionDate": 1518863213065
             }
         ]

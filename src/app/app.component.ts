@@ -17,8 +17,7 @@ import { SplitBillPage } from '../pages/split-bill/split-bill';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
-  // rootPage: any = IntroSliderPage;
-  rootPage: any = DashboardPage;
+  rootPage: any = IntroSliderPage;
 
   pages: Array<{ title: string; component: any; icon: string }>;
 

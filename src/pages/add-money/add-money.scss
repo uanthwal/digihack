@@ -1,10 +1,12 @@
 page-add-money {
-
+  .scroll-content {
+    background: #f8f8f8
+  }
   .acc {
     display: flex;
     font-size: 16px;
     align-items: center;
-
+    margin-bottom: 10px;
     &__img {
       margin-right: 10px;
     }
@@ -114,7 +116,9 @@ page-add-money {
 
   .ifsc-block {
     margin-top: 30px;
-
+    padding: 10px;
+    background: white;
+    border-radius: 3px;
   }
 
   .ifsc-content {
@@ -134,7 +138,13 @@ page-add-money {
   }
 
   .upi-block {
-
+    .bank-icon {
+      max-width: 100%;
+    height: 30px;
+    border: 0;
+    width: 30px;
+    margin-right: 5px;
+    }
     .label.label-md {
       display: flex;
 
@@ -144,6 +154,7 @@ page-add-money {
 
       .fa-check-circle {
         color: darken(#fff, 10%);
+        font-size: 20px;
 
         &.check {
           color: green;
