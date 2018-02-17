@@ -11,6 +11,12 @@ constructor(private http: Http) {}
 
 public fetchAllTransaction() {
       let headers = new Headers();
-    return this.http.get('./assets/json/transaction-summary.json', {headers: headers}).map(response => response.json());
+    return this.http.get('./assets/json/transaction-summary.json', {headers: headers}).delay(100).map(response => response.json());
 }
+
+public fetchAllChat() {
+      let headers = new Headers();
+    return this.http.get('./assets/json/chat-bot.json', {headers: headers}).delay(100).map(response => response.json());
+}
+
 }

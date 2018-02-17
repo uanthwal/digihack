@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,12 +12,12 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
 // @import "../../@angular/material/prebuilt-themes/indigo-pink";
 .tabbar a[aria-selected=true] {
     border-top: 2px;
-    border-style: solid;    
+    border-style: solid;
 }
+
 [status] {
     background-color: transparent;
     font-size: 12px;
@@ -52,30 +50,175 @@
     font-size: 1.7rem;
 }
 
-$named-colors: 'AliceBlue', 'AntiqueWhite', 'Aqua', 'Aquamarine', 'Azure', 'Beige', 'Bisque', 'Black', 'BlanchedAlmond', 'Blue', 'BlueViolet', 'Brown', 'BurlyWood', 'CadetBlue', 'Chartreuse', 'Chocolate', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Crimson', 'Cyan', 'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGrey', 'DarkGreen', 'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'Darkorange', 'DarkOrchid', 'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray', 'DarkSlateGrey', 'DarkTurquoise', 'DarkViolet', 'DeepPink', 'DeepSkyBlue', 'DimGray', 'DimGrey', 'DodgerBlue', 'FireBrick', 'FloralWhite', 'ForestGreen', 'Fuchsia', 'Gainsboro', 'GhostWhite', 'Gold', 'GoldenRod', 'Gray', 'Grey', 'Green', 'GreenYellow', 'HoneyDew', 'HotPink', 'IndianRed', 'Indigo', 'Ivory', 'Khaki', 'Lavender', 'LavenderBlush', 'LawnGreen', 'LemonChiffon', 'LightBlue', 'LightCoral', 'LightCyan', 'LightGoldenRodYellow', 'LightGray', 'LightGrey', 'LightGreen', 'LightPink', 'LightSalmon', 'LightSeaGreen', 'LightSkyBlue', 'LightSlateGray', 'LightSlateGrey', 'LightSteelBlue', 'LightYellow', 'Lime', 'LimeGreen', 'Linen', 'Magenta', 'Maroon', 'MediumAquaMarine', 'MediumBlue', 'MediumOrchid', 'MediumPurple', 'MediumSeaGreen', 'MediumSlateBlue', 'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'MidnightBlue', 'MintCream', 'MistyRose', 'Moccasin', 'NavajoWhite', 'Navy', 'OldLace', 'Olive', 'OliveDrab', 'Orange', 'OrangeRed', 'Orchid', 'PaleGoldenRod', 'PaleGreen', 'PaleTurquoise', 'PaleVioletRed', 'PapayaWhip', 'PeachPuff', 'Peru', 'Pink', 'Plum', 'PowderBlue', 'Purple', 'Red', 'RosyBrown', 'RoyalBlue', 'SaddleBrown', 'Salmon', 'SandyBrown', 'SeaGreen', 'SeaShell', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue', 'SlateGray', 'SlateGrey', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato', 'Turquoise', 'Violet', 'Wheat', 'White', 'WhiteSmoke', 'Yellow', 'YellowGreen';
-
-@for $i from 1 through length($named-colors) { 
-  
-  $red: random(256)-1;
-  $green: random(256)-1;
-  $blue: random(256)-1;
-  
-  $alpha: random(100)/100;
-  
-  .avatar-#{$i} { 
-    color: #fff;
-    background-color: unquote(nth($named-colors, $i));
-  }
+$named-colors: 'AliceBlue',
+'AntiqueWhite',
+'Aqua',
+'Aquamarine',
+'Azure',
+'Beige',
+'Bisque',
+'Black',
+'BlanchedAlmond',
+'Blue',
+'BlueViolet',
+'Brown',
+'BurlyWood',
+'CadetBlue',
+'Chartreuse',
+'Chocolate',
+'Coral',
+'CornflowerBlue',
+'Cornsilk',
+'Crimson',
+'Cyan',
+'DarkBlue',
+'DarkCyan',
+'DarkGoldenRod',
+'DarkGray',
+'DarkGrey',
+'DarkGreen',
+'DarkKhaki',
+'DarkMagenta',
+'DarkOliveGreen',
+'Darkorange',
+'DarkOrchid',
+'DarkRed',
+'DarkSalmon',
+'DarkSeaGreen',
+'DarkSlateBlue',
+'DarkSlateGray',
+'DarkSlateGrey',
+'DarkTurquoise',
+'DarkViolet',
+'DeepPink',
+'DeepSkyBlue',
+'DimGray',
+'DimGrey',
+'DodgerBlue',
+'FireBrick',
+'FloralWhite',
+'ForestGreen',
+'Fuchsia',
+'Gainsboro',
+'GhostWhite',
+'Gold',
+'GoldenRod',
+'Gray',
+'Grey',
+'Green',
+'GreenYellow',
+'HoneyDew',
+'HotPink',
+'IndianRed',
+'Indigo',
+'Ivory',
+'Khaki',
+'Lavender',
+'LavenderBlush',
+'LawnGreen',
+'LemonChiffon',
+'LightBlue',
+'LightCoral',
+'LightCyan',
+'LightGoldenRodYellow',
+'LightGray',
+'LightGrey',
+'LightGreen',
+'LightPink',
+'LightSalmon',
+'LightSeaGreen',
+'LightSkyBlue',
+'LightSlateGray',
+'LightSlateGrey',
+'LightSteelBlue',
+'LightYellow',
+'Lime',
+'LimeGreen',
+'Linen',
+'Magenta',
+'Maroon',
+'MediumAquaMarine',
+'MediumBlue',
+'MediumOrchid',
+'MediumPurple',
+'MediumSeaGreen',
+'MediumSlateBlue',
+'MediumSpringGreen',
+'MediumTurquoise',
+'MediumVioletRed',
+'MidnightBlue',
+'MintCream',
+'MistyRose',
+'Moccasin',
+'NavajoWhite',
+'Navy',
+'OldLace',
+'Olive',
+'OliveDrab',
+'Orange',
+'OrangeRed',
+'Orchid',
+'PaleGoldenRod',
+'PaleGreen',
+'PaleTurquoise',
+'PaleVioletRed',
+'PapayaWhip',
+'PeachPuff',
+'Peru',
+'Pink',
+'Plum',
+'PowderBlue',
+'Purple',
+'Red',
+'RosyBrown',
+'RoyalBlue',
+'SaddleBrown',
+'Salmon',
+'SandyBrown',
+'SeaGreen',
+'SeaShell',
+'Sienna',
+'Silver',
+'SkyBlue',
+'SlateBlue',
+'SlateGray',
+'SlateGrey',
+'Snow',
+'SpringGreen',
+'SteelBlue',
+'Tan',
+'Teal',
+'Thistle',
+'Tomato',
+'Turquoise',
+'Violet',
+'Wheat',
+'White',
+'WhiteSmoke',
+'Yellow',
+'YellowGreen';
+@for $i from 1 through length($named-colors) {
+    $red: random(256)-1;
+    $green: random(256)-1;
+    $blue: random(256)-1;
+    $alpha: random(100)/100;
+    .avatar-#{$i} {
+        color: #fff;
+        background-color: unquote(nth($named-colors, $i));
+    }
 }
+
 .side-menu-icon {
     height: 30px;
     width: 30px;
     margin-right: 10px;
 }
+
 ion-label {
     display: flex;
     align-items: center;
-  }
+}
+
 .avtr {
     position: relative;
     top: 1px;
@@ -95,7 +238,6 @@ ion-label {
     font-size: 20px;
     background-color: #333333;
     color: #eeeeee;
-
     &--1 {
         background-color: #000033;
     }
@@ -199,7 +341,7 @@ ion-label {
     }
     &--32 {
         background-color: #00ff66;
-            color: #333333;
+        color: #333333;
     }
     &--33 {
         background-color: #00ff99;
