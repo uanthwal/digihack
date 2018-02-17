@@ -9,6 +9,13 @@ page-home {
   .h-menu {
     border: 1px solid red;
   }
+
+  .view-all {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    text-align: right;
+  }
   .categories {
     display: flex;
     flex-wrap: wrap;

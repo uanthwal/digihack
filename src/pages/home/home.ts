@@ -44,16 +44,8 @@ export class HomePage {
     { label: 'Reminders', page: RemindersPage, icon: 'reminders.png' }
   ];
 
-  // public tabMenus = [
-  //   { label: 'Offers', page: DealsPage },
-  //   { label: 'My Account', page: MyAccountPage },
-  //   { label: 'Home', page: HomePage },
-  //   { label: 'Transactions', page: TransactionsPage },
-  //   { label: 'Chat', page: ChatBotPage }    
-  // ];
-
   constructor(public navCtrl: NavController) {
-    this.limit = 6;
+    this.limit = 8;
   }
 
   public ionViewDidLoad() {
@@ -62,7 +54,7 @@ export class HomePage {
 
   public toggleView() {
     this.isViewAll = !this.isViewAll;
-    this.limit = this.isViewAll ? this.categories.length : 6;
+    this.limit = this.isViewAll ? this.categories.length : 8;
   }
 
   public detailsPage(page) {
