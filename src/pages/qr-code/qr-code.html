@@ -15,4 +15,10 @@
 
 <ion-content padding>
 
+  <ion-tabs selectedIndex="1" 
+  [color]="isAndroid ? 'royal' : 'primary'">
+  <ion-tab [tabIcon]="tab.icon" 
+    *ngFor="let tab of tabMenus" 
+    [tabTitle]="tab.label" [root]="tab.page"></ion-tab>
+</ion-tabs>
 </ion-content>

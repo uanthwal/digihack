@@ -38,8 +38,13 @@ import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
 import { PipesModule } from '../pipes/pipes.module';
 
-import { TransactionSummaryPage } from '../pages/transaction-summary/transaction-summary';
+import { QrCodeGeneratorPage  } from '../pages/qr-code-generator/qr-code-generator';
+import { QrCodeScannerPage } from '../pages/qr-code-scanner/qr-code-scanner';
 import { TransactionSummaryService } from '../service/transaction-summary-service';
+
+import { QRScanner } from '@ionic-native/qr-scanner';
+import { QRCodeModule } from 'angular2-qrcode';
+
 
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
@@ -47,7 +52,8 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
-  TransactionSummaryPage,AddNewRemindersPage, TransferDetailPage
+  AddNewRemindersPage, TransferDetailPage
+  QrCodeGeneratorPage, QrCodeScannerPage
 ];
 @NgModule({
   declarations: PAGES,
@@ -60,7 +66,8 @@ const PAGES = [
     BrowserModule,
     HttpModule,
     BrowserAnimationsModule,
-    ChartsModule
+    ChartsModule,
+    QRCodeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: PAGES,
@@ -72,7 +79,8 @@ const PAGES = [
     EmailComposer,
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    QRScanner
   ]
 })
 export class AppModule {}
