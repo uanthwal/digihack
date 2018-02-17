@@ -1,9 +1,9 @@
 [{
-        "a": "Hi,\n This is Adam, how may I help you",
+        "a": "Hi,<br/> This is Adam, how may I help you",
         "tag": "hi;hello"
     },
     {
-        "a": "Curently in India DigiBank operated in following cities:\n Mumbai \n Bangalore \n Chennai \n Gandhinagar",
+        "a": "Curently in India DigiBank operated in following cities:<br/> Mumbai <br/> Bangalore <br/> Chennai <br/> Gandhinagar",
         "tag": "branch;loaction"
     }
 ]
