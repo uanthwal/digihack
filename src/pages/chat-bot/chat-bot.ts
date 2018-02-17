@@ -28,7 +28,8 @@ export class ChatBotPage {
   }
 
   public submitQuery() {
-    let result;
+    
+  let result;
     let query = {
       a: '',
       at: null,
@@ -40,6 +41,7 @@ export class ChatBotPage {
     query.at = new Date();
     this.chatHistory.push(query);
     this.askQuery = '';
+    
     
   }
 

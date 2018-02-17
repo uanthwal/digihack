@@ -8,6 +8,19 @@
 
     <ion-navbar>
         <ion-title>ChatBot</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
+              <ion-icon name="md-contacts"></ion-icon>
+            </button>
+        </ion-buttons>
+        <!--<span class="more-chat">
+            <span>
+                <i class="fa fa-question-square"></i>
+            </span>
+        <span>
+                <i class="fa fa-phone-square"></i>
+            </span>
+        </span>-->
     </ion-navbar>
 
 </ion-header>
@@ -28,7 +41,6 @@
                 </div>
                 <div class="result" [innerHtml]="chat.a"></div>
             </div>
-
         </div>
     </div>
     <div class="input-section">
