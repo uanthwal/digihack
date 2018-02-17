@@ -1,3 +1,5 @@
+import { NotificationsPage } from './../pages/notifications/notifications';
+import { MyAccountPage } from './../pages/my-account/my-account';
 import { MutualFundsPage } from './../pages/mutual-funds/mutual-funds';
 import { RequestPage } from './../pages/request/request';
 import { PayBillsPage } from './../pages/pay-bills/pay-bills';
@@ -28,13 +30,17 @@ import { RechargePage } from '../pages/recharge/recharge';
 import { PayeesPage } from '../pages/payees/payees';
 import { NewDepositPage } from '../pages/new-deposit/new-deposit';
 import { RemindersPage } from '../pages/reminders/reminders';
+import { TransactionsPage } from '../pages/transactions/transactions';
+import { ChatBotPage } from '../pages/chat-bot/chat-bot';
+import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
 
 
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
   AddMoneyPage, TransferPage, QrCodePage, DealsPage, PayBillsPage,
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
-  NewDepositPage, RemindersPage
+  NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
+  ChatBotPage, InviteAndEarnPage, NotificationsPage
 ];
 @NgModule({
   declarations: PAGES,

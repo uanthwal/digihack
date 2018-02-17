@@ -1,0 +1,28 @@
+page-my-account {
+    .fa-sidemenu {
+        font-size: 1.3em;
+        color: #ed1c24;
+        padding-right: 10px;
+      }
+      .fa-fa-fp {
+        font-size: 1.8em;
+      }
+    
+      .user-info {
+        display: flex;
+        padding: 10px;
+        border-bottom: 2px solid #e6e6e6;
+        img {
+          height: 60px;
+        }
+        .name {
+          padding-left: 10px;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          p {
+            margin: 0;
+          }
+        }
+      }
+}

@@ -1,3 +1,6 @@
+import { ChatBotPage } from './../chat-bot/chat-bot';
+import { TransactionsPage } from './../transactions/transactions';
+import { HomePage } from './home';
 import { RequestPage } from './../request/request';
 import { RechargePage } from './../recharge/recharge';
 import { QrCodePage } from './../qr-code/qr-code';
@@ -13,6 +16,7 @@ import { PayeesPage } from '../payees/payees';
 import { MutualFundsPage } from '../mutual-funds/mutual-funds';
 import { NewDepositPage } from '../new-deposit/new-deposit';
 import { RemindersPage } from '../reminders/reminders';
+import { MyAccountPage } from '../my-account/my-account';
 
 @Component({
   selector: "page-home",
@@ -24,7 +28,7 @@ export class HomePage {
   public tab2;
   public rootPage = LoginPage;
 
-  public menus = [
+  public categories = [
     { label: 'Add Money', page: AddMoneyPage },
     { label: 'Transfer', page: TransferPage },
     { label: 'QR Code', page: QrCodePage },
@@ -38,6 +42,14 @@ export class HomePage {
     { label: 'Reminders', page: RemindersPage }
   ];
 
+  public tabMenus = [
+    { label: 'Offers', page: DealsPage },
+    { label: 'My Account', page: MyAccountPage },
+    { label: 'Home', page: HomePage },
+    { label: 'Transactions', page: TransactionsPage },
+    { label: 'Chat', page: ChatBotPage }    
+  ];
+
   constructor(public navCtrl: NavController) {
     this.tab1 = LoginPage;
     this.tab2 = LoginPage;
@@ -49,5 +61,10 @@ export class HomePage {
 
   public detailsPage(page) {
     this.navCtrl.push(page);
+  }
+
+  public setPage( thePage ) {
+    console.log('Setting page: ', thePage);
+    this.rootPage = thePage;
   }
 }
