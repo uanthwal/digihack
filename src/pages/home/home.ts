@@ -13,6 +13,7 @@ import { PayeesPage } from '../payees/payees';
 import { MutualFundsPage } from '../mutual-funds/mutual-funds';
 import { NewDepositPage } from '../new-deposit/new-deposit';
 import { RemindersPage } from '../reminders/reminders';
+import { TransactionSummaryPage } from '../transaction-summary/transaction-summary';
 
 @Component({
   selector: "page-home",
@@ -35,7 +36,8 @@ export class HomePage {
     { label: 'Payees', page: PayeesPage },
     { label: 'Mutual Funds', page: MutualFundsPage },
     { label: 'New Deposits', page: NewDepositPage },
-    { label: 'Reminders', page: RemindersPage }
+    { label: 'Reminders', page: RemindersPage },
+    { label: 'Transaction Summary', page: TransactionSummaryPage }
   ];
 
   constructor(public navCtrl: NavController) {

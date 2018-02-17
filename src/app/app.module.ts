@@ -29,12 +29,16 @@ import { PayeesPage } from '../pages/payees/payees';
 import { NewDepositPage } from '../pages/new-deposit/new-deposit';
 import { RemindersPage } from '../pages/reminders/reminders';
 
+import { ChartsModule } from 'ng2-charts';
+
+import { TransactionSummaryPage } from '../pages/transaction-summary/transaction-summary';
+import { TransactionSummaryService } from '../service/transaction-summary-service';
 
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
   AddMoneyPage, TransferPage, QrCodePage, DealsPage, PayBillsPage,
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
-  NewDepositPage, RemindersPage
+  NewDepositPage, RemindersPage, TransactionSummaryPage
 ];
 @NgModule({
   declarations: PAGES,
@@ -45,11 +49,13 @@ const PAGES = [
     ReactiveFormsModule,
     BrowserModule,
     HttpModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: PAGES,
   providers: [
+    TransactionSummaryService,
     Broadcaster,
     HttpClientService,
     AppService,
