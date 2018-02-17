@@ -1,6 +1,5 @@
 import { ChatBotPage } from './../chat-bot/chat-bot';
 import { TransactionsPage } from './../transactions/transactions';
-import { HomePage } from './home';
 import { RequestPage } from './../request/request';
 import { RechargePage } from './../recharge/recharge';
 import { QrCodePage } from './../qr-code/qr-code';
@@ -29,26 +28,26 @@ export class HomePage {
   public rootPage = LoginPage;
 
   public categories = [
-    { label: 'Add Money', page: AddMoneyPage },
-    { label: 'Transfer', page: TransferPage },
-    { label: 'QR Code', page: QrCodePage },
-    { label: 'Deals', page: DealsPage },
-    { label: 'Pay Bills', page: PayBillsPage },
-    { label: 'Recharge', page: RechargePage },
-    { label: 'Request', page: RequestPage },
-    { label: 'Payees', page: PayeesPage },
-    { label: 'Mutual Funds', page: MutualFundsPage },
-    { label: 'New Deposits', page: NewDepositPage },
-    { label: 'Reminders', page: RemindersPage }
+    { label: 'Add Money', page: AddMoneyPage, icon: 'add-money.png' },
+    { label: 'Transfer', page: TransferPage, icon: 'transfers.png' },
+    { label: 'QR Code', page: QrCodePage, icon: 'qr-code.png' },
+    { label: 'Deals', page: DealsPage, icon: 'deals.png' },
+    { label: 'Pay Bills', page: PayBillsPage, icon: 'pay-bills.png' },
+    { label: 'Recharge', page: RechargePage, icon: 'recharge.png' },
+    { label: 'Request', page: RequestPage, icon: 'request-money.png' },
+    { label: 'Payees', page: PayeesPage, icon: 'payees.png' },
+    { label: 'Mutual Funds', page: MutualFundsPage, icon: 'mutual-funds.png' },
+    { label: 'New Deposits', page: NewDepositPage, icon: 'deposits.png' },
+    { label: 'Reminders', page: RemindersPage, icon: 'reminders.png' }
   ];
 
-  public tabMenus = [
-    { label: 'Offers', page: DealsPage },
-    { label: 'My Account', page: MyAccountPage },
-    { label: 'Home', page: HomePage },
-    { label: 'Transactions', page: TransactionsPage },
-    { label: 'Chat', page: ChatBotPage }    
-  ];
+  // public tabMenus = [
+  //   { label: 'Offers', page: DealsPage },
+  //   { label: 'My Account', page: MyAccountPage },
+  //   { label: 'Home', page: HomePage },
+  //   { label: 'Transactions', page: TransactionsPage },
+  //   { label: 'Chat', page: ChatBotPage }    
+  // ];
 
   constructor(public navCtrl: NavController) {
     this.tab1 = LoginPage;
