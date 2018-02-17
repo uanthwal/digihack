@@ -1,3 +1,135 @@
 page-add-money {
 
+  .acc {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+
+    &__img {
+      margin-right: 10px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  .digi-btn-group {
+    display: flex;
+
+    button {
+      flex: 1;
+    }
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .is-active {
+    color: #fff;
+    background-color: #32db64;
+  }
+
+  .digi-btn-group {
+    button.button-md {
+      margin: 0;
+      &+button.button-md {
+        margin-left: -1px;
+      }
+    }
+  }
+
+  .d-label {
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    margin-bottom: 15px;
+
+    label {
+      margin-left: 10px;
+      display: inline-block;
+      font-weight: bold;
+      flex: 1;
+    }
+  }
+
+  .d-card {
+    display: flex;
+    flex-direction: column;
+    background-color:lighten(#000, 30%);
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .d-label {
+    margin-top: 30px;
+
+    .fa-check-circle {
+      color: green;
+      font-size: 20px;
+    }
+  }
+
+  .g-lebel {
+    color: darken(#fff, 30%);
+  }
+
+  .d-details {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+
+    .right {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        width: 100px;
+        text-align: center;
+      }
+    }
+  }
+
+  input {
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .flex-row {
+    display: flex;
+
+    input {
+      width: 80px;
+      text-align: center;
+    }
+  }
+
+  .ifsc-block {
+    margin-top: 30px;
+
+  }
+
+  .ifsc-content {
+    display: flex;
+    flex-direction: column;
+
+    .l-group {
+      display: flex;
+    }
+
+    label {
+      width: 40%;
+    }
+    .value {
+      flex: 1;
+    }
+  }
 }
