@@ -7,12 +7,117 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>AddMoney</ion-title>
+    <ion-title>Add Money</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+  <div class="acc">
+    <div class="acc__img">
+      <img src="assets/icon/digi-icon.png" alt="Digibank">
+    </div>
+    <div class="acc__content">
+      <span class="acc-number">xxxxxxxxxxx1508</span>
+      <span class="bank-name">DBS Bank</span>
+    </div>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>Enter Amount</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <p class="digi-btn-group">
+    <button ion-button color="secondary" outline [class.is-active]="tab.isActive" *ngFor="let tab of tabs" (click)="activate(tab)">{{tab.label}}</button>
+  </p>
+
+  <div class="upi-block" *ngIf="activeTab.key==='UPI'">
+    <ion-list no-lines>
+        <ion-item *ngFor="let bank of banks" (click)="choose(bank)">
+          <i class="fa fa-credit-card"></i>
+          <span>{{ bank.acc }}</span>
+          <i class="fa fa-check-circle" [class.check]="bank.isActive"></i>
+        </ion-item>
+    </ion-list>
+
+    <p class="center">
+      <button ion-button outline item-end icon-left>
+        <ion-icon name="add"></ion-icon>
+        Add other bank account
+      </button>
+    </p>
+  </div>
+
+  <div class="debit-card" *ngIf="activeTab.key==='DEBIT'">
+    <div class="d-label">
+      <i class="fa fa-credit-card"></i>
+      <label for="d-card-label">Use this Dibit Card</label>
+      <i class="fa fa-check-circle"></i>
+    </div>
+    <div class="d-card">
+      <h3 class="d-header">Debit Card</h3>
+      <label class="g-lebel" for="d-card-label">Enter your card number</label>
+      <input type="text" name="degitCard">
+      <div class="d-details">
+        <div class="left">
+          <label class="g-lebel" for="valid-upto">Valid upto</label>
+          <div class="flex-row">
+            <input type="text" name="MM" placeholder="MM">
+            <input type="text" name="YY" placeholder="YY">
+          </div>
+        </div>
+        <div class="right">
+          <label class="g-lebel" for="ccv-code">CCV code</label>
+          <input type="text" name="xxx" placeholder="XXX">
+        </div>
+      </div>
+    </div>
+
+    <p class="center">
+      <button ion-button>procceed</button>
+    </p>
+
+  </div>
+
+  <div class="ifsc-block" *ngIf="activeTab.key==='IFSC'">
+    <h3 class="label">Account Details</h3>
+    <div class="ifsc-content">
+      <div class="l-group">
+        <label for="name">Name</label>
+        <span class="value">RAJKESHWAR PRASAD</span>
+      </div>
+      <div class="l-group">
+        <label for="acc-no">Account Number</label>
+        <span class="value">88007972347990</span>
+      </div>
+      <div class="l-group">
+        <label for="mmid">MMID</label>
+        <span class="value">9612345</span>
+      </div>
+    </div>
+
+    <h3 class="label">Bank Details</h3>
+    <div class="ifsc-content">
+      <div class="l-group">
+        <label for="name">Name</label>
+        <span class="value">digibank</span>
+      </div>
+      <div class="l-group">
+        <label for="acc-no">IFSC</label>
+        <span class="value">DBSS01N0811</span>
+      </div>
+      <div class="l-group">
+        <label for="vpa">VPA</label>
+        <span class="value">rajkeshwar@dbs.com</span>
+      </div>
+    </div>
+
+    <p class="center">
+      <button ion-button>share</button>
+    </p>
+
+  </div>
 
 </ion-content>

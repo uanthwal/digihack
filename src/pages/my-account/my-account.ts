@@ -19,7 +19,7 @@ export class MyAccountPage {
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
   public tab1;
   public tab2;
-  rootPage = MyAccountPage;
+  public rootPage: any = MyAccountPage;
   constructor(public navCtrl: NavController) {
     this.tab1 = DealsPage;
     this.tab2 = LoginPage;
@@ -31,5 +31,9 @@ export class MyAccountPage {
 
   detailsPage(detailsPage) {
     this.navCtrl.push(detailsPage);
+  }
+
+  logout() {
+    this.rootPage = LoginPage;
   }
 }

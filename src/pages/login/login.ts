@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import { HomePage } from "../home/home";
 import { HttpClientService } from "../../shared/http/base.http.service";
 import { AppService } from "../../app/app.services";
 import { URL_CONFIG } from "../../app/app.config";
+import { DashboardPage } from '../dashboard/dashboard';
 
 /**
  * Generated class for the LoginPage page.
@@ -18,8 +18,8 @@ import { URL_CONFIG } from "../../app/app.config";
 })
 export class LoginPage {
   public iconPath = URL_CONFIG.IMG_ASSETS_PATH;
-  userId: String;
-  password: String;
+  public userId: String;
+  public password: String;
   constructor(
     public appService: AppService,
     public navCtrl: NavController,
@@ -44,7 +44,7 @@ export class LoginPage {
     // .subscribe((resp) => {
     //   // Response from Login Server
     // });
-    this.navCtrl.push(HomePage);
+    this.navCtrl.push(DashboardPage);
     // this.nav.setRoot(page.component);
   }
 }
