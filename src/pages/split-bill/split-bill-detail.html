@@ -1,0 +1,26 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Split Bill</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="block">
+        <i class="fa fa-inr fa-icon"></i>
+        <input class="amt-input" type="number" placeholder="Enter Amount" [(ngModel)]="amount" (ngModelChange)="splitBill($event)"
+        />
+    </div>
+    <ion-item *ngFor="let u of selectedBillers" (click)="onClickCard(u)">
+        <div class="user-info">
+            <span class="name-icon">{{u.initials}}</span>
+            <div class="name">
+                <p class="c-name">{{u.name}}</p>
+                <p class="c-num">{{u.upi_add}}</p>
+            </div>
+            <p>&#8377; {{u?.amountToPay}}</p>
+        </div>
+    </ion-item>
+</ion-content>

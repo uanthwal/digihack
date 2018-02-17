@@ -1,0 +1,63 @@
+<!--
+  Generated template for the TransferPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Split Bill</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="billmode">
+      <ion-segment-button value="upi_id">
+        UPI ID
+      </ion-segment-button>
+      <ion-segment-button value="contact">
+        Contact
+      </ion-segment-button>
+
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="billmode">
+    <ion-list *ngSwitchCase="'upi_id'">
+      <ion-item *ngFor="let u of UPIList" (click)="onClickCard(u)">
+        <div class="user-info">
+          <span class="name-icon">{{u.initials}}</span>
+          <div class="name">
+            <p class="c-name">{{u.name}}</p>
+            <p class="c-num">{{u.upi_add}}</p>
+          </div>
+
+          <i class="fa fa-check-circle" [class.check]="u.isSelected"></i>
+
+        </div>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'contact'">
+      <ion-item *ngFor="let c of contactList" (click)="onClickCard(c)">
+        <div class="user-info">
+          <span class="name-icon">{{c.initials}}</span>
+          <div class="name">
+            <p class="c-name">{{c.name}}</p>
+            <p class="c-num">{{c.contact_number}}</p>
+          </div>
+          <i class="fa fa-check-circle" [class.check]="c.isSelected"></i>
+        </div>
+      </ion-item>
+
+    </ion-list>
+  </div>
+  <ion-footer>
+      <button ion-button round (click)="onClickProceedSplit()">PROCEED</button>
+ </ion-footer>
+</ion-content>

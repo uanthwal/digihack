@@ -8,6 +8,8 @@ import { IntroSliderPage } from "../pages/intro-slider/intro-slider";
 import { HomePage } from '../pages/home/home';
 import { RemindersPage } from '../pages/reminders/reminders';
 import { TransferPage } from '../pages/transfer/transfer';
+import { RequestPage } from '../pages/request/request';
+import { SplitBillPage } from '../pages/split-bill/split-bill';
 
 @Component({
   templateUrl: "app.html"
@@ -16,7 +18,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
   // rootPage: any = IntroSliderPage;
-  rootPage: any = TransferPage;
+  rootPage: any = SplitBillPage;
 
   pages: Array<{ title: string; component: any; icon: string }>;
 

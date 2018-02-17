@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { URL_CONFIG } from "../../app/app.config";
 import { ViewEncapsulation } from "@angular/core";
+import { TransferDetailPage } from "./transfer-detail";
 /**
  * Generated class for the TransferPage page.
  *
@@ -15,6 +16,7 @@ import { ViewEncapsulation } from "@angular/core";
 })
 export class TransferPage {
   iconPath = URL_CONFIG.ICON_ASSETS_PATH;
+  transfermode = "upi_id";
   UPIList = [
     {
       initials: "UA",
@@ -154,86 +156,6 @@ export class TransferPage {
   }
 
   onClickCard(data) {
-    debugger;
     this.navCtrl.push(TransferDetailPage, { navParams: data });
-  }
-}
-
-@Component({
-  selector: "page-transfer-detail",
-  template: `<!--
-  Generated template for the RemindersPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Transfer</ion-title>
-  </ion-navbar>
-</ion-header>
-
-
-<ion-content padding>
-<div class="block">
-<div class="user-info" *ngIf="sendToUserData?.type == 'upi_id'">
-<span class="name-icon">{{sendToUserData?.initials}}</span>
-<div class="name">
-  <p class="c-name">{{sendToUserData?.name}}</p>
-  <p class="c-num">{{sendToUserData?.upi_add}}</p>
-</div>
-</div>  
-    
-  </div>
-  <div class="block">
-<div class="user-info" *ngIf="sendToUserData?.type == 'contact'">
-<span class="name-icon">{{sendToUserData?.initials}}</span>
-<div class="name">
-  <p class="c-name">{{sendToUserData?.name}}</p>
-  <p class="c-num">{{sendToUserData?.contact_number}}</p>
-</div>
-</div>  
-  </div>
-  <div class="block">
-  <div class="user-info" *ngIf="sendToUserData?.type == 'bank'">
-                      <img src="{{iconPath}}{{sendToUserData.initials}}">
-                      <div class="name">
-                        <p class="c-name">{{sendToUserData.name}}</p>
-                        <p class="c-num">{{sendToUserData.contact_number}}</p>
-                        <p class="c-num">{{sendToUserData.bank_name}}</p>
-                      </div>
-                    </div>  
-    </div>
-
-  <div class="block">
-    <i class="fa fa-inr fa-icon"></i>
-    <input class="amt-input" type="number" placeholder="Enter Amount" [(ngModel)]="amount"/>
-  </div>
-  <div class="block">
-    <p>Debit from:</p>
-    <div *ngFor="let f of frequency" class="chip" (click)="onClickChip(f)">
-      {{f.name}}
-    </div>
-  </div>
- 
-  <div class="block">
-    <textarea id="remarks" [(ngModel)]="remarks">Remarks (optional) </textarea>
-  </div>
-  <ion-footer>
-         <button ion-button round (click)="onCickSave()">SAVE</button>
-    </ion-footer>
-</ion-content>`,
-  encapsulation: ViewEncapsulation.None
-})
-export class TransferDetailPage {
-  iconPath = URL_CONFIG.ICON_ASSETS_PATH;
-  sendToUserData;
-  remarks;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad TransferPage", this.navParams.get("navParams"));
-    this.sendToUserData = this.navParams.get("navParams");
   }
 }

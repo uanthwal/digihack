@@ -1,10 +1,14 @@
-page-transfer {
+page-split-bill-detail {
   .user-info {
     display: flex;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-  
+    width: 100%;
+    align-items: center;
+    i {
+      font-size: 30px;
+    }
     img {
       height: 60px;
       width: 60px;
@@ -14,6 +18,7 @@ page-transfer {
       justify-content: center;
       display: flex;
       flex-direction: column;
+      flex: 1;
       p {
         margin: 0;
       }
@@ -25,35 +30,17 @@ page-transfer {
       }
     }
   }
-  
+
   .name-icon {
     border: 1px solid black;
     border-radius: 50%;
     padding: 14px;
   }
-  
-  .bank-list {
-    .label.label-md {
-      display: flex;
-      img {
-        max-width: 100%;
-        border: 0;
-        height: 30px;
-        width: 30px;
-        margin-right: 10px;
-      }
-      span {
-        flex: 1;
-      }
+
+  .fa-check-circle {
+    color: darken(#fff, 10%);
+    &.check {
+      color: green;
     }
-    
-    .fa-check-circle {
-      color: darken(#fff, 10%);
-      &.check {
-        color: green;
-      }
-    }
-    
   }
-  
 }
