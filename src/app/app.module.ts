@@ -26,13 +26,13 @@ import { LogoutPage } from "../pages/logout/logout";
 import { IntroSliderPage } from "../pages/intro-slider/intro-slider";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { TransferPage } from '../pages/transfer/transfer';
+import { TransferPage, TransferDetailPage } from '../pages/transfer/transfer';
 import { QrCodePage } from '../pages/qr-code/qr-code';
 import { DealsPage } from '../pages/deals/deals';
 import { RechargePage } from '../pages/recharge/recharge';
 import { PayeesPage } from '../pages/payees/payees';
 import { NewDepositPage } from '../pages/new-deposit/new-deposit';
-import { RemindersPage } from '../pages/reminders/reminders';
+import { RemindersPage, AddNewRemindersPage } from '../pages/reminders/reminders';
 import { TransactionsPage } from '../pages/transactions/transactions';
 import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
@@ -52,6 +52,7 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
+  AddNewRemindersPage, TransferDetailPage
   QrCodeGeneratorPage, QrCodeScannerPage
 ];
 @NgModule({

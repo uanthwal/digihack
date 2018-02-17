@@ -16,7 +16,13 @@
       </div>
     </div>
   </div>
-  <span class="view-all" (click)="toggleView()">
-    {{isViewAll ? 'View Less' : 'View All'}}
-  </span>
+  <div class="view-all">
+    <button ion-button round item-end class="view-all-btn">
+      <span  (click)="toggleView()">
+        {{isViewAll ? 'View Less' : 'View All'}}
+      </span>
+    </button>
+  </div>
+  <div class="divider"></div>
+
 </ion-content>

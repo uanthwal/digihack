@@ -7,12 +7,33 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Reminders</ion-title>
+    <ion-title>Manage Reminders</ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
-
+  <div *ngIf="!remindersList" class="no-rem">
+    <img src="{{iconPath}}reminders.png"/>
+    No reminders
+    
+  </div>
+  <div *ngIf="remindersList?.length > 0">
+      <div class="infocard" *ngFor="let r of remindersList">
+          <div class="user-info">
+              <img src="{{iconPath}}in-love.png"/>
+              <div class="name">
+                <p>{{r.reminder_data.participant.name}}</p>
+                <p>{{r.reminder_data.participant.data}}</p>
+              </div>
+              <div class="name-1">
+                  <p><i class="fa fa-trash"></i></p>
+                  <p><button ion-button round class="pay-btn">PAY</button></p>
+                </div>
+               
+            </div>
+            <p class="payment">Payment: &#8377;{{r.reminder_data.amount}}</p>
+      </div>
+    </div>
+    <ion-fab right bottom>
+        <button ion-fab color="add" (click)="openNewRemindersPage()"><ion-icon name="add"></ion-icon></button>
+      </ion-fab>
 </ion-content>
