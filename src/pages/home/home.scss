@@ -10,10 +10,6 @@ page-home {
     border: 1px solid red;
   }
 
-  .scroll-content {
-    background: #f8f8f8;
-  }
-
   .view-all {
     display: block;
     width: 100%;
@@ -47,10 +43,10 @@ page-home {
         padding: 5px;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
           0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-          img {
-            height: 50px;
-            width: 50px;
-          }
+        img {
+          height: 50px;
+          width: 50px;
+        }
       }
       .menu-icon {
         font-size: 30px;
