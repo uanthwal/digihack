@@ -1,7 +1,26 @@
-<ion-tabs class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'primary'">
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list inset>
+    <button ion-item *ngFor="let menu of menus" (click)="detailsPage(menu.page)">
+      {{ menu.label }}
+    </button>  
+  </ion-list>
+
+  <!-- 
+    <ion-tabs class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'primary'">
     <ion-tab tabIcon="water" tabTitle="Water" [root]="rootPage"></ion-tab>
     <ion-tab tabIcon="leaf" tabTitle="Life" [root]="rootPage"></ion-tab>
     <ion-tab tabIcon="home" tabTitle="Home" [root]="rootPage"></ion-tab>
     <ion-tab tabIcon="magnet" tabTitle="Force" [root]="rootPage"></ion-tab>
     <ion-tab tabIcon="magnet" tabTitle="Force" [root]="rootPage"></ion-tab>
-  </ion-tabs>
+  </ion-tabs> 
+-->
+</ion-content>

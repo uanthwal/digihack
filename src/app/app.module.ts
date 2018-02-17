@@ -1,6 +1,11 @@
+import { MutualFundsPage } from './../pages/mutual-funds/mutual-funds';
+import { RequestPage } from './../pages/request/request';
+import { PayBillsPage } from './../pages/pay-bills/pay-bills';
+import { AddMoneyPage } from './../pages/add-money/add-money';
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 import { NgModule, ErrorHandler } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { IonicApp, IonicModule, IonicErrorHandler } from "ionic-angular";
 import { EmailComposer } from "@ionic-native/email-composer";
@@ -16,10 +21,26 @@ import { LogoutPage } from "../pages/logout/logout";
 import { IntroSliderPage } from "../pages/intro-slider/intro-slider";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TransferPage } from '../pages/transfer/transfer';
+import { QrCodePage } from '../pages/qr-code/qr-code';
+import { DealsPage } from '../pages/deals/deals';
+import { RechargePage } from '../pages/recharge/recharge';
+import { PayeesPage } from '../pages/payees/payees';
+import { NewDepositPage } from '../pages/new-deposit/new-deposit';
+import { RemindersPage } from '../pages/reminders/reminders';
+
+
+const PAGES = [
+  MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
+  AddMoneyPage, TransferPage, QrCodePage, DealsPage, PayBillsPage,
+  RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
+  NewDepositPage, RemindersPage
+];
 @NgModule({
-  declarations: [MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage],
+  declarations: PAGES,
   imports: [
     IonicModule.forRoot(MyApp),
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
@@ -27,7 +48,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     BrowserAnimationsModule
   ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage],
+  entryComponents: PAGES,
   providers: [
     Broadcaster,
     HttpClientService,

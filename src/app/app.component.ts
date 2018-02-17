@@ -4,6 +4,7 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { URL_CONFIG } from "./app.config";
 import { IntroSliderPage } from "../pages/intro-slider/intro-slider";
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: "app.html"
@@ -11,7 +12,8 @@ import { IntroSliderPage } from "../pages/intro-slider/intro-slider";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
-  rootPage: any = IntroSliderPage;
+  // rootPage: any = IntroSliderPage;
+  rootPage: any = HomePage;
 
   pages: Array<{ title: string; component: any; icon: string }>;
 
