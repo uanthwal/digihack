@@ -38,7 +38,6 @@ import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
 import { PipesModule } from '../pipes/pipes.module';
 
-import { TransactionSummaryPage } from '../pages/transaction-summary/transaction-summary';
 import { TransactionSummaryService } from '../service/transaction-summary-service';
 
 const PAGES = [
@@ -46,8 +45,7 @@ const PAGES = [
   AddMoneyPage, TransferPage, QrCodePage, DealsPage, PayBillsPage,
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
-  ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
-  TransactionSummaryPage
+  ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage
 ];
 @NgModule({
   declarations: PAGES,

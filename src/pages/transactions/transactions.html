@@ -6,13 +6,43 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Transactions</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Transactions</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <div *ngIf="requestCount === 0">
+        <div class="summary-section">
+            <ion-item>
+                <ion-label>Account</ion-label>
+                <ion-select style="max-width:100%" [(ngModel)]="selectedAccount">
+                    <ion-option *ngFor="let account of allAccount" value="{{account}}">{{account}}</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Available Balance</ion-label>
+                <div>{{selectedTransictionDetails.accountnumber | currency:'CAD':true:'1.2-2'}}</div>
+            </ion-item>
+        </div>
+        <div class="chart-section"></div>
+        <div class="detail-section"></div>
+        <ion-segment [(ngModel)]="transactionType">
+            <ion-segment-button value="all">
+                All
+            </ion-segment-button>
+            <ion-segment-button value="credit">
+                Credit
+            </ion-segment-button>
+            <ion-segment-button value="debit">
+                Debit
+            </ion-segment-button>
+        </ion-segment>
 
+        <div style="display: block">
+            <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+        </div>
+    </div>
 </ion-content>
