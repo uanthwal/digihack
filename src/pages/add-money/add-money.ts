@@ -2,7 +2,7 @@
  * @Author: Rajkeshwar Prasad (rajkeshwar.pd@gmail.com) 
  * @Date: 2018-02-17 18:52:09 
  * @Last Modified by: rajkeshwar.pd@gmail.com
- * @Last Modified time: 2018-02-17 21:25:32
+ * @Last Modified time: 2018-02-17 22:42:22
  */
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -29,12 +29,12 @@ export class AddMoneyPage {
   ]; 
 
   public banks = [
-    {icon: '', acc: 'xxxxxxxxxx1230', bank: 'HDFC'},
-    {icon: '', acc: 'xxxxxxxxxx1405', bank: 'ICICI'},
-    {icon: '', acc: 'xxxxxxxxxx1512', bank: 'SBI'},
-    {icon: '', acc: 'xxxxxxxxxx8877', bank: 'PNB'},
-    {icon: '', acc: 'xxxxxxxxxx8967', bank: 'KOTAK'},
-    {icon: '', acc: 'xxxxxxxxxx2390', bank: 'BOI'}
+    {icon: '', acc: 'xxxxxxxxxx1230', bank: 'HDFC', isActive: true},
+    {icon: '', acc: 'xxxxxxxxxx1405', bank: 'ICICI', isActive: false},
+    {icon: '', acc: 'xxxxxxxxxx1512', bank: 'SBI', isActive: false},
+    {icon: '', acc: 'xxxxxxxxxx8877', bank: 'PNB', isActive: false},
+    {icon: '', acc: 'xxxxxxxxxx8967', bank: 'KOTAK', isActive: false},
+    {icon: '', acc: 'xxxxxxxxxx2390', bank: 'BOI', isActive: false}
   ];
 
   constructor(public navCtrl: NavController) {
@@ -50,6 +50,12 @@ export class AddMoneyPage {
     const index = this.tabs.indexOf(tab);
     this.tabs.forEach(t => t.isActive = false);
     this.tabs[index].isActive = true;
+  }
+
+  choose( bank ) {
+    const index = this.banks.indexOf(bank);
+    this.banks.forEach(t => t.isActive = false);
+    this.banks[index].isActive = true;
   }
 
   deepClone( obj ) {

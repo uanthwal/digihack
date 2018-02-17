@@ -132,4 +132,27 @@ page-add-money {
       flex: 1;
     }
   }
+
+  .upi-block {
+
+    .label.label-md {
+      display: flex;
+
+      .fa-credit-card {
+        margin-right: 10px;
+      }
+
+      .fa-check-circle {
+        color: darken(#fff, 10%);
+
+        &.check {
+          color: green;
+        }
+      }
+
+      span {
+        flex: 1;
+      }
+    }
+  }
 }

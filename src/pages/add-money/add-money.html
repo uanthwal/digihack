@@ -35,10 +35,13 @@
 
   <div class="upi-block" *ngIf="activeTab.key==='UPI'">
     <ion-list no-lines>
-      <button ion-item *ngFor="let bank of banks">
-        {{ bank.acc }}
-      </button>
+        <ion-item *ngFor="let bank of banks" (click)="choose(bank)">
+          <i class="fa fa-credit-card"></i>
+          <span>{{ bank.acc }}</span>
+          <i class="fa fa-check-circle" [class.check]="bank.isActive"></i>
+        </ion-item>
     </ion-list>
+
     <p class="center">
       <button ion-button outline item-end icon-left>
         <ion-icon name="add"></ion-icon>
