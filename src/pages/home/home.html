@@ -1,13 +1,49 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
 <ion-content>
+  <ion-slides pager (ionSlideDrag)="slideMoved()">
+    <ion-slide>
+      <div class="slide-image-block">
+        <img class="slide-image" src="{{iconPath}}offer1.jpg" alt="" [@bounce]='state' (@bounce.done)="animationDone()">
+      </div>
+    </ion-slide>
 
+    <ion-slide>
+      <div class="slide-image-block">
+        <img class="slide-image" src="{{iconPath}}offer2.jpg" alt="" [@bounce]='state'>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-image-block">
+        <img class="slide-image" src="{{iconPath}}offer3.jpg" alt="" [@bounce]='state'>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-image-block">
+        <img class="slide-image" src="{{iconPath}}offer4.jpg" alt="" [@bounce]='state'>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+  <div class="bank-info">
+    <div class="item one">
+      <i class="fa fa-bank"></i>
+    </div>
+    <div class="item two">
+      <span>digiSavings ****1508</span>
+      <span>upendra@dbs</span>
+    </div>
+    <div>&#8377; 2,51,0000.00</div>
+  </div>
+  <div class="divider"></div>
+  <div class="bank-info">
+    <div class="item one">
+      <i class="fa fa-credit-card"></i>
+    </div>
+    <div class="item two">
+      <span>Debit Card</span>
+      <span>XXXX XXXX XXXX 9999</span>
+    </div>
+  </div>
+  <div class="divider"></div>
   <div class="categories">
     <div class="box" *ngFor="let category of categories | limitTo:limit">
       <div class="box__p" (click)="detailsPage(category.page)">
@@ -17,12 +53,13 @@
     </div>
   </div>
   <div class="view-all">
-    <button ion-button round item-end class="view-all-btn">
-      <span  (click)="toggleView()">
+    <button ion-button item-end class="view-all-btn">
+      <span (click)="toggleView()">
         {{isViewAll ? 'View Less' : 'View All'}}
       </span>
     </button>
   </div>
-  <div class="divider"></div>
 
+
+  <div class="divider"></div>
 </ion-content>
