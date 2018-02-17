@@ -149,7 +149,16 @@ export class TransferPage {
       type: "bank"
     }
   ];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.UPIList = this.UPIList.map((ul: any) => {
+      ul.icon = 'avtr--' + Math.floor(Math.random() * 215);
+      return ul;
+    });
+    this.contactList = this.contactList.map((ul: any) => {
+      ul.icon = 'avtr--' + Math.floor(Math.random() * 215);
+      return ul;
+    });
+  }
 
   ionViewDidLoad() {
     console.log("ionViewDidLoad TransferPage");

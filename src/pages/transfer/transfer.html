@@ -32,7 +32,7 @@
         <ion-list *ngSwitchCase="'upi_id'">
             <ion-item *ngFor="let u of UPIList" (click)="onClickCard(u)">
                 <div class="user-info">
-                    <span class="name-icon">{{u.initials}}</span>
+                    <span class="name-icon" [ngClass]="u.icon">{{u.initials}}</span>
                     <div class="name">
                       <p class="c-name">{{u.name}}</p>
                       <p class="c-num">{{u.upi_add}}</p>
@@ -46,7 +46,7 @@
         <ion-list *ngSwitchCase="'contact'">
             <ion-item *ngFor="let c of contactList" (click)="onClickCard(c)">
                 <div class="user-info">
-                    <span class="name-icon">{{c.initials}}</span>
+                    <span class="name-icon" [ngClass]="c.icon">{{c.initials}}</span>
                     <div class="name">
                       <p class="c-name">{{c.name}}</p>
                       <p class="c-num">{{c.contact_number}}</p>

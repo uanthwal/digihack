@@ -36,7 +36,7 @@
   <div class="upi-block" *ngIf="activeTab.key==='UPI'">
     <ion-list no-lines>
         <ion-item *ngFor="let bank of banks" (click)="choose(bank)">
-          <i class="fa fa-credit-card"></i>
+          <img class="bank-icon" src="{{iconPath}}{{bank.icon}}">
           <span>{{ bank.acc }}</span>
           <i class="fa fa-check-circle" [class.check]="bank.isActive"></i>
         </ion-item>
@@ -53,24 +53,24 @@
   <div class="debit-card" *ngIf="activeTab.key==='DEBIT'">
     <div class="d-label">
       <i class="fa fa-credit-card"></i>
-      <label for="d-card-label">Use this Dibit Card</label>
+      <label for="d-card-label">Use this Debit Card</label>
       <i class="fa fa-check-circle"></i>
     </div>
     <div class="d-card">
       <h3 class="d-header">Debit Card</h3>
       <label class="g-lebel" for="d-card-label">Enter your card number</label>
-      <input type="text" name="degitCard">
+      <input type="number" name="degitCard">
       <div class="d-details">
         <div class="left">
           <label class="g-lebel" for="valid-upto">Valid upto</label>
           <div class="flex-row">
-            <input type="text" name="MM" placeholder="MM">
-            <input type="text" name="YY" placeholder="YY">
+            <input type="number" name="MM" placeholder="MM">
+            <input type="number" name="YY" placeholder="YY">
           </div>
         </div>
         <div class="right">
-          <label class="g-lebel" for="ccv-code">CCV code</label>
-          <input type="text" name="xxx" placeholder="XXX">
+          <label class="g-lebel" for="ccv-code">CVV code</label>
+          <input type="number" name="xxx" placeholder="XXX">
         </div>
       </div>
     </div>

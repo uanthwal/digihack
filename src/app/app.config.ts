@@ -11,8 +11,8 @@ export const URL_CONFIG = {
     ADD_PATIENT_URL:'',
     SEARCH_URL:'',
     RATING_URL: 'https://play.google.com/store/apps/details?id=be.linkiu.easydoc&hl=en',
-    ICON_ASSETS_PATH:'../assets/icon/',
-    IMG_ASSETS_PATH:'../assets/img/'
+    ICON_ASSETS_PATH:'assets/icon/',
+    IMG_ASSETS_PATH:'assets/img/'
 };
 
 export const APP_CONFIG = {

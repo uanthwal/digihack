@@ -2,7 +2,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { MyAccountPage } from '../pages/my-account/my-account';
 import { MutualFundsPage } from './../pages/mutual-funds/mutual-funds';
-import { RequestPage, RequestDetailPage } from '../pages/request/request';
+import { RequestPage } from '../pages/request/request';
 import { PayBillsPage } from '../pages/pay-bills/pay-bills';
 import { AddMoneyPage } from '../pages/add-money/add-money';
 import { SplashScreen } from "@ionic-native/splash-screen";
@@ -47,7 +47,7 @@ import { QRCodeModule } from 'angular2-qrcode';
 import { SplitBillPage } from '../pages/split-bill/split-bill';
 import { TransferDetailPage } from '../pages/transfer/transfer-detail';
 import { SplitBillDetailPage } from '../pages/split-bill/split-bill-detail';
-
+import { RequestDetailPage } from '../pages/request/request-detail';
 
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
