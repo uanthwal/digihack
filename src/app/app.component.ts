@@ -1,3 +1,4 @@
+import { DashboardPage } from './../pages/dashboard/dashboard';
 import { Component, ViewChild } from "@angular/core";
 import { Nav, Platform } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
@@ -13,7 +14,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
   // rootPage: any = IntroSliderPage;
-  rootPage: any = HomePage;
+  rootPage: any = DashboardPage;
 
   pages: Array<{ title: string; component: any; icon: string }>;
 

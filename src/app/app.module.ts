@@ -1,9 +1,10 @@
-import { NotificationsPage } from './../pages/notifications/notifications';
-import { MyAccountPage } from './../pages/my-account/my-account';
+import { DashboardPage } from '../pages/dashboard/dashboard';
+import { NotificationsPage } from '../pages/notifications/notifications';
+import { MyAccountPage } from '../pages/my-account/my-account';
 import { MutualFundsPage } from './../pages/mutual-funds/mutual-funds';
-import { RequestPage } from './../pages/request/request';
-import { PayBillsPage } from './../pages/pay-bills/pay-bills';
-import { AddMoneyPage } from './../pages/add-money/add-money';
+import { RequestPage } from '../pages/request/request';
+import { PayBillsPage } from '../pages/pay-bills/pay-bills';
+import { AddMoneyPage } from '../pages/add-money/add-money';
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 import { NgModule, ErrorHandler } from "@angular/core";
@@ -13,7 +14,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from "ionic-angular";
 import { EmailComposer } from "@ionic-native/email-composer";
 import { MyApp } from "./app.component";
 import { HomePage } from "../pages/home/home";
-import { LoginPage } from "./../pages/login/login";
+import { LoginPage } from "../pages/login/login";
 import { AppService } from "./app.services";
 import { HttpClientService } from "../shared/http/base.http.service";
 import { BrowserModule } from "@angular/platform-browser";
@@ -34,13 +35,12 @@ import { TransactionsPage } from '../pages/transactions/transactions';
 import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
 
-
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
   AddMoneyPage, TransferPage, QrCodePage, DealsPage, PayBillsPage,
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
-  ChatBotPage, InviteAndEarnPage, NotificationsPage
+  ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage
 ];
 @NgModule({
   declarations: PAGES,
