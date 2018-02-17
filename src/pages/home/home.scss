@@ -14,6 +14,12 @@ page-home {
     background: #f8f8f8;
   }
 
+  .view-all {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    text-align: right;
+  }
   .categories {
     display: flex;
     flex-wrap: wrap;
