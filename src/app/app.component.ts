@@ -16,7 +16,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
   // rootPage: any = IntroSliderPage;
-  rootPage: any = TransferPage;
+  rootPage: any = DashboardPage;
 
   pages: Array<{ title: string; component: any; icon: string }>;
 

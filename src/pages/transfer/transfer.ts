@@ -154,7 +154,6 @@ export class TransferPage {
   }
 
   onClickCard(data) {
-    debugger;
     this.navCtrl.push(TransferDetailPage, { navParams: data });
   }
 }

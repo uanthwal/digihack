@@ -52,8 +52,7 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
-  AddNewRemindersPage, TransferDetailPage
-  QrCodeGeneratorPage, QrCodeScannerPage
+  AddNewRemindersPage, TransferDetailPage, QrCodeScannerPage
 ];
 @NgModule({
   declarations: PAGES,
