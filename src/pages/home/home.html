@@ -9,12 +9,14 @@
 <ion-content>
 
   <div class="categories">
-    <div class="box" *ngFor="let category of categories">
+    <div class="box" *ngFor="let category of categories | limitTo:limit">
       <div class="box__p" (click)="detailsPage(category.page)">
         <img src="{{iconPath}}{{category.icon}}" />
         <div class="box--label">{{category.label}}</div>
       </div>
     </div>
   </div>
-  
+  <span class="view-all" (click)="toggleView()">
+    {{isViewAll ? 'View All' : 'View Less'}}
+  </span>
 </ion-content>

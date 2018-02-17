@@ -34,6 +34,7 @@ import { RemindersPage } from '../pages/reminders/reminders';
 import { TransactionsPage } from '../pages/transactions/transactions';
 import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
+import { PipesModule } from '../pipes/pipes.module';
 
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
@@ -46,11 +47,13 @@ const PAGES = [
   declarations: PAGES,
   imports: [
     IonicModule.forRoot(MyApp),
+    PipesModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     HttpModule,
+    PipesModule,
     BrowserAnimationsModule
   ],
   bootstrap: [IonicApp],
