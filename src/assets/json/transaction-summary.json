@@ -1,62 +1,69 @@
 [{
-    "accountnumber": 56465464646546546,
-    "availablebalance": 12000,
-    "currency": "INR",
-    "transaction": [{
-            "id": 1,
-            "type": "d",
-            "amount": 10,
-            "category": "Food",
-            "comment": "Snack",
-            "transactionDate": 1518863213065
-        },
-        {
-            "id": 2,
-            "type": "c",
-            "amount": 50000,
-            "category": "Salary",
-            "comment": "Feb Salary",
-            "transactionDate": 1518863213065
-        },
-        {
-            "id": 3,
-            "type": "c",
-            "amount": 1000,
-            "category": "Other",
-            "comment": "Raj payback",
-            "transactionDate": 1518863213065
-        },
-        {
-            "id": 4,
-            "type": "d",
-            "amount": 100,
-            "category": "Recharge",
-            "comment": "My mobile",
-            "transactionDate": 1518863213065
-        },
-        {
-            "id": 5,
-            "type": "d",
-            "amount": 10,
-            "category": "Other",
-            "comment": "Parking",
-            "transactionDate": 1518863213065
-        },
-        {
-            "id": 1,
-            "type": "c",
-            "amount": 10,
-            "category": "Food",
-            "comment": "Snack",
-            "transactionDate": 1518863213065
-        },
-        {
-            "id": 1,
-            "type": "c",
-            "amount": 10,
-            "category": "Food",
-            "comment": "Snack",
-            "transactionDate": 1518863213065
-        }
-    ]
-}]
+        "accountnumber": 56465464646546546,
+        "availablebalance": 12000,
+        "currency": "INR",
+        "transaction": [{
+                "id": 1,
+                "type": "d",
+                "amount": 10,
+                "category": "Food",
+                "comment": "Snack",
+                "transactionDate": 1518863213065
+            },
+            {
+                "id": 2,
+                "type": "c",
+                "amount": 50000,
+                "category": "Salary",
+                "comment": "Feb Salary",
+                "transactionDate": 1518863213065
+            },
+            {
+                "id": 3,
+                "type": "c",
+                "amount": 1000,
+                "category": "Other",
+                "comment": "Raj payback",
+                "transactionDate": 1518863213065
+            },
+            {
+                "id": 4,
+                "type": "d",
+                "amount": 100,
+                "category": "Recharge",
+                "comment": "My mobile",
+                "transactionDate": 1518863213065
+            },
+            {
+                "id": 5,
+                "type": "d",
+                "amount": 10,
+                "category": "Other",
+                "comment": "Parking",
+                "transactionDate": 1518863213065
+            },
+            {
+                "id": 1,
+                "type": "c",
+                "amount": 10,
+                "category": "Food",
+                "comment": "Snack",
+                "transactionDate": 1518863213065
+            },
+            {
+                "id": 1,
+                "type": "c",
+                "amount": 10,
+                "category": "Food",
+                "comment": "Snack",
+                "transactionDate": 1518863213065
+            }
+        ]
+    },
+    {
+        "accountnumber": 56465464646547895,
+        "availablebalance": 0,
+        "currency": "INR",
+        "transaction": []
+    }
+]
