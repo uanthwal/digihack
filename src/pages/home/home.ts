@@ -24,7 +24,7 @@ export class HomePage {
   public tab2;
   public rootPage = LoginPage;
 
-  public menus = [
+  public categories = [
     { label: 'Add Money', page: AddMoneyPage },
     { label: 'Transfer', page: TransferPage },
     { label: 'QR Code', page: QrCodePage },

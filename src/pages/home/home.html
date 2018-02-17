@@ -11,9 +11,17 @@
   <ion-list inset>
     <button ion-item *ngFor="let menu of menus" (click)="detailsPage(menu.page)">
       {{ menu.label }}
-    </button>  
+    </button>
   </ion-list>
 
+  <div class="categories">
+    <div class="box" *ngFor="let category of categories">
+      <div class="box__p" (click)="detailsPage(category.page)">
+        <img src="{{iconPath}}{{category.icon}}" />
+        <div class="box--label">{{category.label}}</div>
+      </div>
+    </div>
+  </div>
   <!-- 
     <ion-tabs class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'primary'">
     <ion-tab tabIcon="water" tabTitle="Water" [root]="rootPage"></ion-tab>
