@@ -16,15 +16,15 @@
 <ion-content padding>
     <div *ngIf="requestCount === 0">
         <div class="summary-section">
-            <ion-item>
+            <ion-item class="display-full">
                 <ion-label>Account</ion-label>
                 <ion-select style="max-width:100%" [(ngModel)]="selectedAccount">
                     <ion-option *ngFor="let account of allAccount" value="{{account}}">{{account}}</ion-option>
                 </ion-select>
             </ion-item>
-            <ion-item>
+            <ion-item class="display-full">
                 <ion-label>Available Balance</ion-label>
-                <div>{{selectedTransictionDetails.accountnumber | currency:'CAD':true:'1.2-2'}}</div>
+                <ion-label>{{selectedTransictionDetails.currency}} {{selectedTransictionDetails.accountnumber | number:'.2-2'}}</ion-label>
             </ion-item>
         </div>
         <div class="chart-section"></div>
