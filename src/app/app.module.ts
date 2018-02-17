@@ -2,7 +2,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { MyAccountPage } from '../pages/my-account/my-account';
 import { MutualFundsPage } from './../pages/mutual-funds/mutual-funds';
-import { RequestPage } from '../pages/request/request';
+import { RequestPage, RequestDetailPage } from '../pages/request/request';
 import { PayBillsPage } from '../pages/pay-bills/pay-bills';
 import { AddMoneyPage } from '../pages/add-money/add-money';
 import { SplashScreen } from "@ionic-native/splash-screen";
@@ -26,7 +26,7 @@ import { LogoutPage } from "../pages/logout/logout";
 import { IntroSliderPage } from "../pages/intro-slider/intro-slider";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { TransferPage, TransferDetailPage } from '../pages/transfer/transfer';
+import { TransferPage } from '../pages/transfer/transfer';
 import { QrCodePage } from '../pages/qr-code/qr-code';
 import { DealsPage } from '../pages/deals/deals';
 import { RechargePage } from '../pages/recharge/recharge';
@@ -44,6 +44,9 @@ import { TransactionSummaryService } from '../service/transaction-summary-servic
 
 import { QRScanner } from '@ionic-native/qr-scanner';
 import { QRCodeModule } from 'angular2-qrcode';
+import { SplitBillPage } from '../pages/split-bill/split-bill';
+import { TransferDetailPage } from '../pages/transfer/transfer-detail';
+import { SplitBillDetailPage } from '../pages/split-bill/split-bill-detail';
 
 
 const PAGES = [
@@ -52,7 +55,12 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
+<<<<<<< HEAD
   AddNewRemindersPage, TransferDetailPage, QrCodeScannerPage
+=======
+  AddNewRemindersPage, TransferDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage
+  
+>>>>>>> 015093126966988adfe175b772fb587094838325
 ];
 @NgModule({
   declarations: PAGES,

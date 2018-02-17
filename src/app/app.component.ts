@@ -8,6 +8,8 @@ import { IntroSliderPage } from "../pages/intro-slider/intro-slider";
 import { HomePage } from '../pages/home/home';
 import { RemindersPage } from '../pages/reminders/reminders';
 import { TransferPage } from '../pages/transfer/transfer';
+import { RequestPage } from '../pages/request/request';
+import { SplitBillPage } from '../pages/split-bill/split-bill';
 
 @Component({
   templateUrl: "app.html"

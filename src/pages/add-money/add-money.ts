@@ -29,12 +29,9 @@ export class AddMoneyPage {
   ]; 
 
   public banks = [
-    {icon: '', acc: 'xxxxxxxxxx1230', bank: 'HDFC', isActive: true},
-    {icon: '', acc: 'xxxxxxxxxx1405', bank: 'ICICI', isActive: false},
-    {icon: '', acc: 'xxxxxxxxxx1512', bank: 'SBI', isActive: false},
-    {icon: '', acc: 'xxxxxxxxxx8877', bank: 'PNB', isActive: false},
-    {icon: '', acc: 'xxxxxxxxxx8967', bank: 'KOTAK', isActive: false},
-    {icon: '', acc: 'xxxxxxxxxx2390', bank: 'BOI', isActive: false}
+    {icon: 'hdfc_logo.png', acc: 'XXXX XXXX 1508', bank: 'HDFC', isActive: true},
+    {icon: 'icici_logo.png', acc: 'XXXX XXXX 1552', bank: 'ICICI', isActive: false},
+    {icon: 'sbi_logo.png', acc: 'XXXX XXXX 1512', bank: 'SBI', isActive: false}
   ];
 
   constructor(public navCtrl: NavController) {
