@@ -47,19 +47,25 @@ public userTransactionDetails: any;
           this.userTransactionDetails = response;
           this.allAccount = this.userTransactionDetails.map(acc => acc.accountnumber);
           this.selectedAccount = this.allAccount[0];
-          this.selectedTransictionDetails = this.userTransactionDetails[0];
+          this.selectedTransictionDetails = JSON.parse(JSON.stringify(this.userTransactionDetails[0]));
           this.requestCount--;
           
       });
       this.presentLoading();      
   }
 
-    presentLoading() {
+    private presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
       duration: 100
     });
     loader.present();
+  }
+
+  public accountChange(valueChange) {
+    console.log("valueChange",valueChange);
+    let acc = this.userTransactionDetails.find(account => account.accountnumber == valueChange);
+    this.selectedTransictionDetails = JSON.parse(JSON.stringify(acc));
   }
 
     // events

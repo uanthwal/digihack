@@ -18,7 +18,7 @@
         <div class="summary-section">
             <ion-item class="display-full">
                 <ion-label style="width: 100%; max-width:100%">Account</ion-label>
-                <ion-select style="max-width:100%" [(ngModel)]="selectedAccount">
+                <ion-select style="max-width:100%" [(ngModel)]="selectedAccount" (ngModelChange)="accountChange($event)">
                     <ion-option *ngFor="let account of allAccount" value="{{account}}">{{account}}</ion-option>
                 </ion-select>
             </ion-item>
