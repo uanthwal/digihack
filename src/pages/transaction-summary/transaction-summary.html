@@ -1,0 +1,14 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Transaction Summary</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div style="display: block">
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</ion-content>

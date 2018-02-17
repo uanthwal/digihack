@@ -1,3 +1,5 @@
+import { TransferPage } from './../transfer/transfer';
+import { AddMoneyPage } from './../add-money/add-money';
 import { ChatBotPage } from './../chat-bot/chat-bot';
 import { TransactionsPage } from './../transactions/transactions';
 import { RequestPage } from './../request/request';
@@ -7,8 +9,6 @@ import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
 import { URL_CONFIG } from "../../app/app.config";
 import { LoginPage } from "../login/login";
-import { AddMoneyPage } from '../add-money/add-money';
-import { TransferPage } from '../transfer/transfer';
 import { DealsPage } from '../deals/deals';
 import { PayBillsPage } from '../pay-bills/pay-bills';
 import { PayeesPage } from '../payees/payees';
@@ -16,15 +16,16 @@ import { MutualFundsPage } from '../mutual-funds/mutual-funds';
 import { NewDepositPage } from '../new-deposit/new-deposit';
 import { RemindersPage } from '../reminders/reminders';
 import { MyAccountPage } from '../my-account/my-account';
+import { TransactionSummaryPage } from '../transaction-summary/transaction-summary';
+
 
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
 })
 export class HomePage {
+
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
-  public tab1;
-  public tab2;
   public rootPage = LoginPage;
 
   public categories = [
@@ -50,8 +51,7 @@ export class HomePage {
   // ];
 
   constructor(public navCtrl: NavController) {
-    this.tab1 = LoginPage;
-    this.tab2 = LoginPage;
+
   }
 
   public ionViewDidLoad() {
@@ -60,10 +60,5 @@ export class HomePage {
 
   public detailsPage(page) {
     this.navCtrl.push(page);
-  }
-
-  public setPage( thePage ) {
-    console.log('Setting page: ', thePage);
-    this.rootPage = thePage;
   }
 }
