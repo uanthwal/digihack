@@ -6,47 +6,39 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>ChatBot</ion-title>
-        <ion-buttons end>
-            <button ion-button icon-only>
-              <ion-icon name="md-contacts"></ion-icon>
-            </button>
-        </ion-buttons>
-        <!--<span class="more-chat">
-            <span>
-                <i class="fa fa-question-square"></i>
-            </span>
-        <span>
-                <i class="fa fa-phone-square"></i>
-            </span>
-        </span>-->
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>ChatBot</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="md-contacts"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <div class="display-section">
-        <div class="chat" *ngFor="let chat of chatHistory">
-            <div class="question">
-                <div class="result" [innerHtml]="chat.q"></div>
-                <div class="profile">
-                    <i class="fa fa-user"></i>
-                </div>
-            </div>
-            <div class="answer">
-                <div class="profile">
-                    <i class="fa fa-user"></i>
-                </div>
-                <div class="result" [innerHtml]="chat.a"></div>
-            </div>
+  <div class="display-section">
+    <div class="chat" *ngFor="let chat of chatHistory">
+      <div class="question">
+        <div class="result" [innerHtml]="chat.q"></div>
+        <div class="profile">
+          <i class="fa fa-user"></i>
         </div>
-    </div>
-    <div class="input-section">
-        <input [(ngModel)]="askQuery" />
-        <div class="button">
-            <button (click)="submitQuery()"><i class="fa fa-caret-right"></i></button>
+      </div>
+      <div class="answer">
+        <div class="profile">
+          <i class="fa fa-user"></i>
         </div>
+        <div class="result" [innerHtml]="chat.a"></div>
+      </div>
     </div>
+  </div>
+  <div class="input-section">
+    <input [(ngModel)]="askQuery" />
+    <div class="button">
+      <button (click)="submitQuery()"><i class="fa fa-caret-right"></i></button>
+    </div>
+  </div>
 </ion-content>

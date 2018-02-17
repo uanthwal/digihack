@@ -55,8 +55,12 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
+<<<<<<< HEAD
+  AddNewRemindersPage, TransferDetailPage, QrCodeScannerPage
+=======
   AddNewRemindersPage, TransferDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage
   
+>>>>>>> 015093126966988adfe175b772fb587094838325
 ];
 @NgModule({
   declarations: PAGES,

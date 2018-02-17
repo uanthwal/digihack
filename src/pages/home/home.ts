@@ -41,7 +41,8 @@ export class HomePage {
     { label: 'Payees', page: PayeesPage, icon: 'payees.png' },
     { label: 'Mutual Funds', page: MutualFundsPage, icon: 'mutual-funds.png' },
     { label: 'New Deposits', page: NewDepositPage, icon: 'deposits.png' },
-    { label: 'Reminders', page: RemindersPage, icon: 'reminders.png' }
+    { label: 'Reminders', page: RemindersPage, icon: 'reminders.png' },
+    { label: 'Spli Bill', page: RemindersPage, icon: 'reminders.png' }
   ];
 
   constructor(public navCtrl: NavController) {
