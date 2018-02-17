@@ -27,6 +27,8 @@ export class HomePage {
 
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
   public rootPage = LoginPage;
+  public limit = 6;
+  public isViewAll = false;
 
   public categories = [
     { label: 'Add Money', page: AddMoneyPage, icon: 'add-money.png' },
@@ -51,11 +53,16 @@ export class HomePage {
   // ];
 
   constructor(public navCtrl: NavController) {
-
+    this.limit = 6;
   }
 
   public ionViewDidLoad() {
     // this.navCtrl.setRoot(HomePage);
+  }
+
+  public toggleView() {
+    this.isViewAll = !this.isViewAll;
+    this.limit = this.isViewAll ? this.categories.length : 6;
   }
 
   public detailsPage(page) {

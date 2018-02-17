@@ -36,8 +36,11 @@ import { RemindersPage } from '../pages/reminders/reminders';
 import { TransactionsPage } from '../pages/transactions/transactions';
 import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
+import { PipesModule } from '../pipes/pipes.module';
+
 import { TransactionSummaryPage } from '../pages/transaction-summary/transaction-summary';
 import { TransactionSummaryService } from '../service/transaction-summary-service';
+
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
   AddMoneyPage, TransferPage, QrCodePage, DealsPage, PayBillsPage,
@@ -50,6 +53,7 @@ const PAGES = [
   declarations: PAGES,
   imports: [
     IonicModule.forRoot(MyApp),
+    PipesModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
