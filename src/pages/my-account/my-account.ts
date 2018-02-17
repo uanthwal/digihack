@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { DealsPage } from '../deals/deals';
+import { LoginPage } from '../login/login';
+import { URL_CONFIG } from '../../app/app.config';
 
 /**
  * Generated class for the MyAccountPage page.
@@ -13,12 +16,20 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'my-account.html',
 })
 export class MyAccountPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
+  public tab1;
+  public tab2;
+  rootPage = MyAccountPage;
+  constructor(public navCtrl: NavController) {
+    this.tab1 = DealsPage;
+    this.tab2 = LoginPage;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MyAccountPage');
+    // this.navCtrl.setRoot(HomePage);
   }
 
+  detailsPage(detailsPage) {
+    this.navCtrl.push(detailsPage);
+  }
 }
