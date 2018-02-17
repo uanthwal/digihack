@@ -16,7 +16,7 @@
 <ion-content padding>
     <div *ngIf="requestCount === 0">
         <div class="summary-section">
-            <ion-item class="display-full">
+            <ion-item>
                 <ion-label style="width: 100%; max-width:100%">Account</ion-label>
                 <ion-select style="max-width:100%" [(ngModel)]="selectedAccount" (ngModelChange)="accountChange($event)">
                     <ion-option *ngFor="let account of allAccount" value="{{account}}">{{account}}</ion-option>
@@ -28,22 +28,29 @@
                 <ion-label style="width: 100%; max-width:100%" class="fa fa-inr"> {{selectedTransictionDetails.availablebalance | number:'.2-2'}}</ion-label>
             </ion-item>
         </div>
-        <div class="chart-section"></div>
-        <div class="detail-section"></div>
-        <ion-segment [(ngModel)]="transactionType">
-            <ion-segment-button value="all">
-                All
-            </ion-segment-button>
-            <ion-segment-button value="credit">
-                Credit
-            </ion-segment-button>
-            <ion-segment-button value="debit">
-                Debit
-            </ion-segment-button>
-        </ion-segment>
+        <div *ngIf="showTransaction">
+            <div class="chart-section"></div>
+            <div class="detail-section"></div>
+            <ion-segment [(ngModel)]="transactionType">
+                <ion-segment-button value="all">
+                    All
+                </ion-segment-button>
+                <ion-segment-button value="credit">
+                    Credit
+                </ion-segment-button>
+                <ion-segment-button value="debit">
+                    Debit
+                </ion-segment-button>
+            </ion-segment>
 
-        <div style="display: block">
-            <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            <div style="display: block">
+                <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!showTransaction">
+        <div class="no-transaction">
+            No Transaction Found
         </div>
     </div>
 </ion-content>

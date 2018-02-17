@@ -73,18 +73,18 @@ export class HomePage {
   public isViewAll = false;
 
   public categories = [
-    { label: "Add Money", page: AddMoneyPage, icon: "add-money.png" },
-    { label: "Transfer", page: TransferPage, icon: "transfers.png" },
-    { label: "Request", page: RequestPage, icon: "request-money.png" },
-    { label: "Reminders", page: RemindersPage, icon: "reminders.png" },
-    { label: "Split Bill", page: SplitBillPage, icon: "split-bill.png" },
-    { label: "QR Code", page: QrCodePage, icon: "qr-code.png" },
-    { label: "Deals", page: DealsPage, icon: "deals.png" },
-    { label: "Pay Bills", page: PayBillsPage, icon: "pay-bills.png" },
-    { label: "Recharge", page: RechargePage, icon: "recharge.png" },
-    { label: "Payees", page: PayeesPage, icon: "payees.png" },
-    { label: "Mutual Funds", page: MutualFundsPage, icon: "mutual-funds.png" },
-    { label: "New Deposits", page: NewDepositPage, icon: "deposits.png" }
+    { label: 'Add Money', page: AddMoneyPage, icon: 'add-money.png' },
+    { label: 'Transfer', page: TransferPage, icon: 'transfers.png' },
+    { label: 'QR Code', page: QrCodePage, icon: 'qr-code.png' },
+    { label: 'Deals', page: DealsPage, icon: 'deals.png' },
+    { label: 'Pay Bills', page: PayBillsPage, icon: 'pay-bills.png' },
+    { label: 'Recharge', page: RechargePage, icon: 'recharge.png' },
+    { label: 'Request', page: RequestPage, icon: 'request-money.png' },
+    { label: 'Payees', page: PayeesPage, icon: 'payees.png' },
+    { label: 'Mutual Funds', page: MutualFundsPage, icon: 'mutual-funds.png' },
+    { label: 'New Deposits', page: NewDepositPage, icon: 'deposits.png' },
+    { label: 'Reminders', page: RemindersPage, icon: 'reminders.png' },
+    { label: 'Split Bill', page: RemindersPage, icon: 'split-bill.png' }
   ];
   state: string = "x";
   constructor(public navCtrl: NavController, private cdRef: ChangeDetectorRef) {

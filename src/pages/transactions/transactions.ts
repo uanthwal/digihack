@@ -26,6 +26,7 @@ public userTransactionDetails: any;
   public selectedTransictionDetails: any = {};
 
   public allAccount: any[];
+  public showTransaction: boolean = false;
 
   public requestCount: number = 0;
 
@@ -48,6 +49,7 @@ public userTransactionDetails: any;
           this.allAccount = this.userTransactionDetails.map(acc => acc.accountnumber);
           this.selectedAccount = this.allAccount[0];
           this.selectedTransictionDetails = JSON.parse(JSON.stringify(this.userTransactionDetails[0]));
+          this.showTransaction = this.selectedTransictionDetails.transaction.length > 0;
           this.requestCount--;
           
       });
@@ -66,6 +68,7 @@ public userTransactionDetails: any;
     console.log("valueChange",valueChange);
     let acc = this.userTransactionDetails.find(account => account.accountnumber == valueChange);
     this.selectedTransictionDetails = JSON.parse(JSON.stringify(acc));
+    this.showTransaction = this.selectedTransictionDetails.transaction.length > 0;
   }
 
     // events
