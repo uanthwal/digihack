@@ -15,7 +15,7 @@
     </div>
     <ion-item *ngFor="let u of selectedBillers" (click)="onClickCard(u)">
         <div class="user-info">
-            <span class="name-icon">{{u.initials}}</span>
+            <span class="name-icon" [ngClass]="u.icon" >{{u.initials}}</span>
             <div class="name">
                 <p class="c-name">{{u.name}}</p>
                 <p class="c-num">{{u.upi_add}}</p>

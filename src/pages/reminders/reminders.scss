@@ -1,141 +1,147 @@
+page-reminders {
+  .scroll-content {
+    padding: 0px !important;
+    background: #f8f8f8;
+  }
 
-page-reminders .scroll-content {
-  padding: 0px !important;
-}
-
-.fa-icon-avatar {
+  .fa-icon-avatar {
     border: 1px solid black;
     border-radius: 50%;
     padding: 15px;
     margin-right: 11px;
     font-size: 20px;
-}
-.fa-icon{
-    padding-right:20px;
-    font-size:20px; 
-}
-.block {
-  padding-left: 16px;
-  margin: 16px 0;
-  .amt-input {
-    padding: 10px;
-    font-size: 18px;
-    border: none;
   }
-  .amt-input::-webkit-input-placeholder {
+  .fa-icon {
+    padding-right: 20px;
     font-size: 20px;
   }
-  .cal {
-    padding-left: 0;
-  }
-  textarea {
-    height: 100px;
-    width: 96%;
-    border-radius: 5px;
-  }
-  .user-info {
-    display: flex;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-  
-    img {
-      height: 60px;
-    }
-    .name {
-      padding-left: 10px;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      p {
-        margin: 0;
-      }
-    }
-    .name-1 {
-      padding-left: 10px;
-      justify-content: center;
-      display: flex;
-      text-align: center;
-      flex-direction: column;
-      p {
-        margin: 0;
-      }
-    }
-    
-  }
-}
-.chip {
-  display: inline-block;
-  padding: 5px 14px;
-  border: 1px solid black;
-  border-radius: 15px;
-  margin: 5px 5px;
-  width: auto;
-}
-ion-footer {
-  text-align: center;
-  border: none;
-}
-.add-btn {
-  padding-left: 0px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  .item-inner {
-    border: none !important;
-  }
-}
-
-.no-rem {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 51%;
-  font-size: 30px;
-  flex-direction: column;
-}
-.infocard {
-  border-bottom: 2px solid #e6e6e6;
-  .user-info {
-    display: flex;
-    padding: 10px;
-  
-    img {
-      height: 60px;
-    }
-    .name {
-      padding-left: 10px;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      flex:1;
-      p {
-        margin: 0;
-      }
-    }
-    .name-1 {
-      padding-left: 10px;
-      justify-content: center;
-      display: flex;
-      text-align: center;
-      flex-direction: column;
-      p {
-        margin: 0;
-      }
-    }
-    
-  }
-  .payment {
-    display: block;
+  .block {
     padding-left: 16px;
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-}
+    margin: 16px 0;
+    .amt-input {
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+    }
+    .amt-input::-webkit-input-placeholder {
+      font-size: 20px;
+    }
+    .cal {
+      padding-left: 0;
+    }
+    textarea {
+      height: 100px;
+      width: 96%;
+      border-radius: 5px;
+    }
+    .user-info {
+      display: flex;
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
 
-.pay-btn {
-  border-radius: 0;
-  padding: 0px 10px;
-  height: 25px;
+      img {
+        height: 60px;
+      }
+      .name {
+        padding-left: 10px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        p {
+          margin: 0;
+        }
+      }
+      .name-1 {
+        padding-left: 10px;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .chip {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 5px 5px;
+    width: auto;
+  }
+  ion-footer {
+    text-align: center;
+    border: none;
+  }
+  .add-btn {
+    padding-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .item-inner {
+      border: none !important;
+    }
+  }
+
+  .no-rem {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 51%;
+    font-size: 30px;
+    flex-direction: column;
+  }
+  .infocard {
+    border-bottom: 2px solid #e6e6e6;
+    background: white;
+    margin: 7px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    .user-info {
+      display: flex;
+      padding: 10px;
+
+      img {
+        height: 60px;
+      }
+      .name {
+        padding-left: 10px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        p {
+          margin: 0;
+        }
+      }
+      .name-1 {
+        padding-left: 10px;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        .fa-trash {
+          font-size: 25px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .payment {
+      display: block;
+      padding-left: 16px;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  .pay-btn {
+    border-radius: 0;
+    padding: 0px 10px;
+    height: 25px;
+  }
 }

@@ -1,0 +1,77 @@
+page-request-detail {
+  .scroll-content {
+    padding: 0 !important;
+    background: #f8f8f8;
+    > div:first-child {
+      padding: 0 !important;
+    }
+  }
+  .block {
+      background: white;
+      textarea {
+        height: 100px;
+        width: 96%;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 8px;
+      }
+  }
+  .b2 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .user-info {
+    display: flex;
+    padding: 10px;
+    background: white;
+
+    img {
+      height: 55px;
+      width: 55px;
+    }
+    .name {
+      padding-left: 10px;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      p {
+        margin: 0;
+      }
+      .c-name {
+        font-size: 17px;
+      }
+      .c-num {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .name-icon {
+    border-radius: 50%;
+    padding: 14px;
+    color: white;
+  }
+
+  .bank-list {
+    .label.label-md {
+      display: flex;
+      img {
+        max-width: 100%;
+        border: 0;
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+      }
+      span {
+        flex: 1;
+      }
+    }
+
+    .fa-check-circle {
+      color: darken(#fff, 10%);
+      &.check {
+        color: green;
+      }
+    }
+  }
+}

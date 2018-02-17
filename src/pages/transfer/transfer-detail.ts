@@ -5,8 +5,7 @@ import { ViewEncapsulation } from "@angular/core";
 
 @Component({
     selector: "page-transfer-detail",
-    template: ``,
-    encapsulation: ViewEncapsulation.None
+    templateUrl: 'transfer-detail.html'
   })
   export class TransferDetailPage {
     iconPath = URL_CONFIG.ICON_ASSETS_PATH;

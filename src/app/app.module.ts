@@ -32,7 +32,7 @@ import { DealsPage } from '../pages/deals/deals';
 import { RechargePage } from '../pages/recharge/recharge';
 import { PayeesPage } from '../pages/payees/payees';
 import { NewDepositPage } from '../pages/new-deposit/new-deposit';
-import { RemindersPage, AddNewRemindersPage } from '../pages/reminders/reminders';
+import { RemindersPage } from '../pages/reminders/reminders';
 import { TransactionsPage } from '../pages/transactions/transactions';
 import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
@@ -48,6 +48,7 @@ import { SplitBillPage } from '../pages/split-bill/split-bill';
 import { TransferDetailPage } from '../pages/transfer/transfer-detail';
 import { SplitBillDetailPage } from '../pages/split-bill/split-bill-detail';
 import { RequestDetailPage } from '../pages/request/request-detail';
+import { ReminderDetailPage } from '../pages/reminders/reminder-detail';
 
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
@@ -55,7 +56,7 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
-  AddNewRemindersPage, TransferDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage
+  ReminderDetailPage, TransferDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage
   
 ];
 @NgModule({
