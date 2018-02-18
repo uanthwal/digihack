@@ -28,7 +28,7 @@ export class ChatBotPage {
   }
 
   public submitQuery() {
-    
+    if(this.askQuery) {
   let result;
     let query = {
       a: '',
@@ -48,6 +48,7 @@ export class ChatBotPage {
           this.chatHistory.push(query);
     }, 1000);    
     
+  }
   }
 
 }
