@@ -1,0 +1,47 @@
+<!--
+    Generated template for the RemindersPage page.
+  
+    See http://ionicframework.com/docs/components/#navigation for more info on
+    Ionic pages and navigation.
+  -->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Request Money</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="block">
+    <div class="user-info" *ngIf="sendToUserData?.type == 'upi_id'">
+      <span class="name-icon" [ngClass]="sendToUserData.icon">{{sendToUserData?.initials}}</span>
+      <div class="name">
+        <p class="c-name">{{sendToUserData?.name}}</p>
+        <p class="c-num">{{sendToUserData?.upi_add}}</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="block">
+    <div class="user-info" *ngIf="sendToUserData?.type == 'contact'">
+      <span class="name-icon" [ngClass]="sendToUserData.icon">{{sendToUserData?.initials}}</span>
+      <div class="name">
+        <p class="c-name">{{sendToUserData?.name}}</p>
+        <p class="c-num">{{sendToUserData?.contact_number}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block b2">
+    <i class="fa fa-inr fa-icon"></i>
+    <input class="amt-input" type="number" placeholder="Enter Amount" [(ngModel)]="amount" />
+  </div>
+
+  <div class="block">
+    <textarea id="remarks" [(ngModel)]="remarks" placeholder="Add a message (optional)"></textarea>
+  </div>
+  <div class="trn-btn">
+      <button ion-button round (click)="onClickRequest()">REQUEST</button>
+  </div>
+</ion-content>

@@ -84,7 +84,7 @@ export class HomePage {
     { label: 'Mutual Funds', page: MutualFundsPage, icon: 'mutual-funds.png' },
     { label: 'New Deposits', page: NewDepositPage, icon: 'deposits.png' },
     { label: 'Reminders', page: RemindersPage, icon: 'reminders.png' },
-    { label: 'Split Bill', page: RemindersPage, icon: 'split-bill.png' }
+    { label: 'Split Bill', page: SplitBillPage, icon: 'split-bill.png' }
   ];
   state: string = "x";
   constructor(public navCtrl: NavController, private cdRef: ChangeDetectorRef) {

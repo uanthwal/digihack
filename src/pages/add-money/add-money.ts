@@ -6,6 +6,7 @@
  */
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { URL_CONFIG } from '../../app/app.config';
 
 /**
  * Generated class for the AddMoneyPage page.
@@ -21,7 +22,7 @@ import { NavController } from 'ionic-angular';
 export class AddMoneyPage {
 
   public activeTab: any;
-
+  iconPath = URL_CONFIG.ICON_ASSETS_PATH;
   public tabs = [
     { label: 'UPI', isActive: true, key: 'UPI' },
     { label: 'Debit Card', isActive: false, key: 'DEBIT' },

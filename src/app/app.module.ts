@@ -2,7 +2,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { MyAccountPage } from '../pages/my-account/my-account';
 import { MutualFundsPage } from './../pages/mutual-funds/mutual-funds';
-import { RequestPage, RequestDetailPage } from '../pages/request/request';
+import { RequestPage } from '../pages/request/request';
 import { PayBillsPage } from '../pages/pay-bills/pay-bills';
 import { AddMoneyPage } from '../pages/add-money/add-money';
 import { SplashScreen } from "@ionic-native/splash-screen";
@@ -32,7 +32,7 @@ import { DealsPage } from '../pages/deals/deals';
 import { RechargePage } from '../pages/recharge/recharge';
 import { PayeesPage } from '../pages/payees/payees';
 import { NewDepositPage } from '../pages/new-deposit/new-deposit';
-import { RemindersPage, AddNewRemindersPage } from '../pages/reminders/reminders';
+import { RemindersPage } from '../pages/reminders/reminders';
 import { TransactionsPage } from '../pages/transactions/transactions';
 import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
@@ -45,9 +45,10 @@ import { TransactionSummaryService } from '../service/transaction-summary-servic
 import { QRScanner } from '@ionic-native/qr-scanner';
 import { QRCodeModule } from 'angular2-qrcode';
 import { SplitBillPage } from '../pages/split-bill/split-bill';
-import { TransferDetailPage } from '../pages/transfer/transfer-detail';
 import { SplitBillDetailPage } from '../pages/split-bill/split-bill-detail';
-
+import { RequestDetailPage } from '../pages/request-detail/request-detail';
+import { ReminderDetailPage } from '../pages/reminder-detail/reminder-detail';
+import { TransferDetailsPage } from '../pages/transfer-details/transfer-details';
 
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
@@ -55,8 +56,7 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
-  AddNewRemindersPage, TransferDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage
-  
+  ReminderDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage, TransferDetailsPage 
 ];
 @NgModule({
   declarations: PAGES,

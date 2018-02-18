@@ -1,3 +1,4 @@
+import { TransferPage } from './../pages/transfer/transfer';
 import { DashboardPage } from './../pages/dashboard/dashboard';
 import { Component, ViewChild } from "@angular/core";
 import { Nav, Platform } from "ionic-angular";
@@ -7,7 +8,6 @@ import { URL_CONFIG } from "./app.config";
 import { IntroSliderPage } from "../pages/intro-slider/intro-slider";
 import { HomePage } from '../pages/home/home';
 import { RemindersPage } from '../pages/reminders/reminders';
-import { TransferPage } from '../pages/transfer/transfer';
 import { RequestPage } from '../pages/request/request';
 import { SplitBillPage } from '../pages/split-bill/split-bill';
 
@@ -19,8 +19,9 @@ import { TransactionsPage } from '../pages/transactions/transactions';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
-  // rootPage: any = IntroSliderPage;
-  rootPage: any = TransactionsPage;
+
+  rootPage: any = IntroSliderPage;
+
 
   pages: Array<{ title: string; component: any; icon: string }>;
 
