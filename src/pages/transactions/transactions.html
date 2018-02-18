@@ -10,8 +10,8 @@
         <ion-title>Transactions</ion-title>
         <ion-buttons end>
             <button ion-button icon-only>
-        <ion-icon name="md-search"></ion-icon>
-      </button>
+                <ion-icon name="md-search"></ion-icon>
+            </button>
         </ion-buttons>
     </ion-navbar>
 
@@ -58,14 +58,17 @@
             </ion-segment>
 
             <div style="display: block">
-                <canvas *ngIf="transactionType == 'all'" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
-                <canvas *ngIf="transactionType == 'Credit'" baseChart [data]="doughnutChartDataC" [labels]="doughnutChartLabelsC" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
-                <canvas *ngIf="transactionType == 'Debit'" baseChart [data]="doughnutChartDataD" [labels]="doughnutChartLabelsD" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                <canvas *ngIf="transactionType == 'all'" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
+                    (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                <canvas *ngIf="transactionType == 'Credit'" baseChart [data]="doughnutChartDataC" [labels]="doughnutChartLabelsC" [chartType]="doughnutChartType"
+                    (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                <canvas *ngIf="transactionType == 'Debit'" baseChart [data]="doughnutChartDataD" [labels]="doughnutChartLabelsD" [chartType]="doughnutChartType"
+                    (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
             </div>
             <div>
                 <div class="each-tran" *ngFor="let eachTran of getTran()">
                     <ion-item>
-                        <ion-label style="width: 100%; max-width:100%">Catrgoty</ion-label>
+                        <ion-label style="width: 100%; max-width:100%">Category</ion-label>
                         <ion-select *ngIf="eachTran.type == 'Credit'" style="max-width:100%" [(ngModel)]="eachTran.category">
                             <ion-option *ngFor="let cate of doughnutChartLabelsC" value="{{cate}}">{{cate}}</ion-option>
                         </ion-select>
@@ -94,7 +97,7 @@
         </div>
         <div *ngIf="!showTransaction">
             <div class="no-transaction">
-                No Transaction Found
+                No Transactions Found
             </div>
         </div>
     </div>
