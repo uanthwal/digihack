@@ -105,9 +105,9 @@ export class TransactionsPage {
     let todate = new Date(this.filterdate.to).getTime();
     let fromdate = new Date(this.filterdate.from).getTime();
     let result: any[] = this.selectedTransictionDetails.transaction
-      .filter(tran => tran.transactionDate <= fromdate)
-      .filter(tran2 => tran2.transactionDate >= todate);
-    return JSON.parse(JSON.stringify(tranData));
+      .filter(tran => tran.transactionDate >= fromdate)
+      .filter(tran2 => tran2.transactionDate <= todate);
+    return JSON.parse(JSON.stringify(result));
   }
 
   private formatDate(value) {
