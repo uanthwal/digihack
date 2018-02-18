@@ -1,0 +1,66 @@
+{
+  "recharge": [
+    {
+      "initials": "dbs.png",
+      "name": "Rajkeshwar Prasad",
+      "contact_number": "8880136913",
+      "last_recharge": "6 Feb 2018",
+      "amount": 100,
+      "type": "bank"
+    },
+    {
+      "initials": "sc_logo.png",
+      "name": "Upendra Anthwal",
+      "contact_number": "9900887766",
+      "last_recharge": "16 Jan 2018",
+      "amount": 150,
+      "type": "bank"
+    },
+    {
+      "initials": "hdfc_logo.png",
+      "name": "Prakash Gupta",
+      "contact_number": "9867452390",
+      "last_recharge": "26 Dec 2017",
+      "amount": 30,
+      "type": "bank"
+    },
+    {
+      "initials": "icici_logo.png",
+      "name": "Himanshu Kesarwani",
+      "contact_number": "8967452378",
+      "last_recharge": "6 Nov 2016",
+      "amount": 120,
+      "type": "bank"
+    },
+    {
+      "initials": "sbi_logo.png",
+      "name": "Jay Shah",
+      "contact_number": "7856349078",
+      "last_recharge": "17 Sep 2017",
+      "amount": 399,
+      "type": "bank"
+    }
+  ],
+  "offers": [
+    {
+      "promoCode": "FAMILY",
+      "desc": "Pay for your family and earn Cashback upto 300. T&C apply!"
+    },
+    {
+      "promoCode": "GET5",
+      "desc": "Flat Rs 5 Cashback on recharge or bill payment of Rs. 10 or more. Code can be used 10 times everyday."
+    },
+    {
+      "promoCode": "TRIPLING1",
+      "desc": "Earn upto 100 Cashback* in three transactions. T&C apply!"
+    },
+    {
+      "promoCode": "GRAB30",
+      "desc": "Use Promocode GRAB30 to get upto Rs 30 Cashback & additional Cashback of Rs. 30 on Paying through Paytm UPI. T&C apply!"
+    },
+    {
+      "promoCode": "RECHARGE100",
+      "desc": "Get 100% Cashback* on recharge on the Paytm Mall app. Download Now."
+    }
+  ]
+}

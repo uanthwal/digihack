@@ -6,39 +6,40 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>ChatBot</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only>
+    <ion-navbar>
+        <ion-title>ChatBot</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
         <ion-icon name="md-contacts"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-navbar>
+        </ion-buttons>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <div class="display-section">
-    <div class="chat" *ngFor="let chat of chatHistory">
-      <div class="question">
-        <div class="result" [innerHtml]="chat.q"></div>
-        <div class="profile">
-          <i class="fa fa-user"></i>
+    <div class="display-section">
+        <div class="chat" *ngFor="let chat of chatHistory">
+            <div class="question">
+                <div class="result" [innerHtml]="chat.q"></div>
+                <div class="profile">
+                    <i class="fa fa-user"></i>
+                </div>
+            </div>
+            <div *ngIf="chat.a" class="answer">
+                <div class="profile">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="result" [innerHtml]="chat.a"></div>
+            </div>
+            <div *ngIf="!chat.a" class="loading-chat">Loading.....</div>
         </div>
-      </div>
-      <div class="answer">
-        <div class="profile">
-          <i class="fa fa-user"></i>
+    </div>
+    <div class="input-section">
+        <input [(ngModel)]="askQuery" />
+        <div class="button">
+            <button (click)="submitQuery()"><i class="fa fa-caret-right"></i></button>
         </div>
-        <div class="result" [innerHtml]="chat.a"></div>
-      </div>
     </div>
-  </div>
-  <div class="input-section">
-    <input [(ngModel)]="askQuery" />
-    <div class="button">
-      <button (click)="submitQuery()"><i class="fa fa-caret-right"></i></button>
-    </div>
-  </div>
 </ion-content>

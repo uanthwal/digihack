@@ -70,4 +70,39 @@
 
   </div>
 
+  <ion-segment [(ngModel)]="offersType">
+    <ion-segment-button value="recent">
+      Recents
+    </ion-segment-button>
+    <ion-segment-button value="offers">
+      Offers
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="tab-content" [ngSwitch]="offersType">
+    <ion-list *ngSwitchCase="'recent'">
+      <ion-item *ngFor="let b of recharges">
+        <div class="user-info">
+          <img src="{{iconPath}}{{b.initials}}">
+          <div class="name">
+            <p class="c-name">{{b.name}}</p>
+            <p class="c-num">{{b.contact_number}}</p>
+            <p class="c-num">Last recharge on {{b.last_recharge}}</p>
+          </div>
+          <div class="amt">
+            <i class="fa fa-inr"></i>{{b.amount}}
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'offers'">
+      <ion-item *ngFor="let offer of offers">
+        <div class="name">
+          Promocode: <strong class="c-name">{{offer.promoCode}}</strong>
+          <p class="c-num">{{offer.desc}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

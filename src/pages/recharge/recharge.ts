@@ -1,3 +1,5 @@
+import { URL_CONFIG } from './../../app/app.config';
+import { Http } from '@angular/http';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -14,13 +16,25 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RechargePage {
 
+  public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
+
   public rechargeType = 'prepaid';
+  public offersType = 'recent';
+  public recharges: any = [];
+  public offers: any = [];
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private http: Http) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RechargePage');
+    this.http.get('assets/data/recharge-data.json')
+    .map(resp => resp.json())
+    .subscribe(resp => {
+      this.recharges = resp.recharge;
+      this.offers = resp.offers;
+    });
   }
+
+  
 
 }
