@@ -8,11 +8,12 @@ page-home {
     }
     .one {
       padding: 10px;
-      border: 1px solid red;
+      border: 1px solid #ed1c24;
       border-radius: 50%;
       margin-right: 10px;
       i {
         font-size: 25px;
+        color: #ed1c24;
       }
     }
     .two {
@@ -45,7 +46,7 @@ page-home {
   }
 
   .h-menu {
-    border: 1px solid red;
+    border: 1px solid #ed1c24;
   }
 
   .view-all {

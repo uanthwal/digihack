@@ -1,7 +1,7 @@
 {
   "recharge": [
     {
-      "initials": "dbs.png",
+      "initials": "airtel.png",
       "name": "Rajkeshwar Prasad",
       "contact_number": "8880136913",
       "last_recharge": "6 Feb 2018",
@@ -9,7 +9,7 @@
       "type": "bank"
     },
     {
-      "initials": "sc_logo.png",
+      "initials": "idea.png",
       "name": "Upendra Anthwal",
       "contact_number": "9900887766",
       "last_recharge": "16 Jan 2018",
@@ -17,7 +17,7 @@
       "type": "bank"
     },
     {
-      "initials": "hdfc_logo.png",
+      "initials": "jio.png",
       "name": "Prakash Gupta",
       "contact_number": "9867452390",
       "last_recharge": "26 Dec 2017",
@@ -25,7 +25,7 @@
       "type": "bank"
     },
     {
-      "initials": "icici_logo.png",
+      "initials": "vodafone.png",
       "name": "Himanshu Kesarwani",
       "contact_number": "8967452378",
       "last_recharge": "6 Nov 2016",
@@ -33,7 +33,7 @@
       "type": "bank"
     },
     {
-      "initials": "sbi_logo.png",
+      "initials": "airtel.png",
       "name": "Jay Shah",
       "contact_number": "7856349078",
       "last_recharge": "17 Sep 2017",
