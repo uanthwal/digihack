@@ -15,7 +15,7 @@
 <ion-content padding>
   <div class="block" *ngIf="sendToUserData?.type == 'upi_id'">
     <div class="user-info" >
-      <span class="name-icon">{{sendToUserData?.initials}}</span>
+      <span class="name-icon" [ngClass]="sendToUserData.icon">{{sendToUserData?.initials}}</span>
       <div class="name">
         <p class="c-name">{{sendToUserData?.name}}</p>
         <p class="c-num">{{sendToUserData?.upi_add}}</p>
@@ -25,7 +25,7 @@
   </div>
   <div class="block"*ngIf="sendToUserData?.type == 'contact'">
     <div class="user-info">
-      <span class="name-icon">{{sendToUserData?.initials}}</span>
+      <span class="name-icon" [ngClass]="sendToUserData.icon">{{sendToUserData?.initials}}</span>
       <div class="name">
         <p class="c-name">{{sendToUserData?.name}}</p>
         <p class="c-num">{{sendToUserData?.contact_number}}</p>

@@ -3,7 +3,8 @@ import { NavController, NavParams } from "ionic-angular";
 import { HttpClientService } from "../../shared/http/base.http.service";
 import { AppService } from "../../app/app.services";
 import { URL_CONFIG } from "../../app/app.config";
-import { DashboardPage } from '../dashboard/dashboard';
+import { DashboardPage } from "../dashboard/dashboard";
+import { ToastController } from "ionic-angular/components/toast/toast-controller";
 
 /**
  * Generated class for the LoginPage page.
@@ -24,7 +25,8 @@ export class LoginPage {
     public appService: AppService,
     public navCtrl: NavController,
     public navParams: NavParams,
-    public httpClient: HttpClientService
+    public httpClient: HttpClientService,
+    public toastCtrl: ToastController
   ) {}
 
   ionViewDidLoad() {
@@ -44,7 +46,15 @@ export class LoginPage {
     // .subscribe((resp) => {
     //   // Response from Login Server
     // });
-    this.navCtrl.push(DashboardPage);
+    if (this.userId == "digihack" && this.password == "digihack") {
+      this.navCtrl.push(DashboardPage);
+    } else {
+      let toast = this.toastCtrl.create({
+        message: "User Id or Password incorrect!",
+        duration: 3000
+      });
+      toast.present();
+    }
     // this.nav.setRoot(page.component);
   }
 }
