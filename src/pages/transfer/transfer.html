@@ -14,59 +14,58 @@
 
 
 <ion-content padding>
-    <div padding>
-        <ion-segment [(ngModel)]="transfermode">
-          <ion-segment-button value="upi_id">
-            UPI ID
-          </ion-segment-button>
-          <ion-segment-button value="contact">
-            Contact
-          </ion-segment-button>
-          <ion-segment-button value="bankaccount">
-              Bank Account
-            </ion-segment-button>
-        </ion-segment>
-      </div>
-      
-      <div [ngSwitch]="transfermode">
-        <ion-list *ngSwitchCase="'upi_id'">
-            <ion-item *ngFor="let u of UPIList" (click)="onClickCard(u)">
-                <div class="user-info">
-                    <span class="name-icon" [ngClass]="u.icon">{{u.initials}}</span>
-                    <div class="name">
-                      <p class="c-name">{{u.name}}</p>
-                      <p class="c-num">{{u.upi_add}}</p>
-                    </div>
-                                      
-                  </div>    
-            </ion-item>
-            
-        </ion-list>
-      
-        <ion-list *ngSwitchCase="'contact'">
-            <ion-item *ngFor="let c of contactList" (click)="onClickCard(c)">
-                <div class="user-info">
-                    <span class="name-icon" [ngClass]="c.icon">{{c.initials}}</span>
-                    <div class="name">
-                      <p class="c-name">{{c.name}}</p>
-                      <p class="c-num">{{c.contact_number}}</p>
-                    </div>
-                  </div>    
-            </ion-item>
-           
-          </ion-list>
-          <ion-list *ngSwitchCase="'bankaccount'">
-              <ion-item *ngFor="let b of bankAccountList" (click)="onClickCard(b)">
-                  <div class="user-info">
-                      <img src="{{iconPath}}{{b.initials}}">
-                      <div class="name">
-                        <p class="c-name">{{b.name}}</p>
-                        <p class="c-num">{{b.contact_number}}</p>
-                        <p class="c-num">{{b.bank_name}}</p>
-                      </div>
-                    </div>    
-              </ion-item>
-             
-            </ion-list>
-      </div>
+  <div padding>
+    <ion-segment [(ngModel)]="transfermode">
+      <ion-segment-button value="upi_id">
+        UPI ID
+      </ion-segment-button>
+      <ion-segment-button value="contact">
+        Contact
+      </ion-segment-button>
+      <ion-segment-button value="bankaccount">
+        Bank Account
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="transfermode">
+    <ion-list *ngSwitchCase="'upi_id'">
+      <ion-item *ngFor="let u of UPIList" (click)="onClickCard(u)">
+        <div class="user-info">
+          <span class="name-icon" [ngClass]="u.icon">{{u.initials}}</span>
+          <div class="name">
+            <p class="c-name">{{u.name}}</p>
+            <p class="c-num">{{u.upi_add}}</p>
+          </div>
+
+        </div>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'contact'">
+      <ion-item *ngFor="let c of contactList" (click)="onClickCard(c)">
+        <div class="user-info">
+          <span class="name-icon" [ngClass]="c.icon">{{c.initials}}</span>
+          <div class="name">
+            <p class="c-name">{{c.name}}</p>
+            <p class="c-num">{{c.contact_number}}</p>
+          </div>
+        </div>
+      </ion-item>
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'bankaccount'">
+      <ion-item *ngFor="let b of bankAccountList" (click)="onClickCard(b)">
+        <div class="user-info">
+          <img src="{{iconPath}}{{b.initials}}">
+          <div class="name">
+            <p class="c-name">{{b.name}}</p>
+            <p class="c-num">{{b.contact_number}}</p>
+            <p class="c-num">{{b.bank_name}}</p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

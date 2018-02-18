@@ -11,7 +11,9 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 
 @Component({
   selector: 'page-qr-code-scanner',
-  templateUrl: 'qr-code-scanner.html',
+  template: `
+    <ion-content padding></ion-content>
+  `,
 })
 export class QrCodeScannerPage {
 

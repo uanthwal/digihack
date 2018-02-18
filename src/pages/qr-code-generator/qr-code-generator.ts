@@ -15,7 +15,11 @@ import * as QRCode from 'qrcode/build/qrcode';
 
 @Component({
   selector: 'page-qr-code-reader',
-  templateUrl: 'qr-code-generator.html',
+  template: `
+    <ion-content padding>
+      <canvas id="canvas"></canvas>
+    </ion-content>
+  `,
 })
 export class QrCodeGeneratorPage {
 
