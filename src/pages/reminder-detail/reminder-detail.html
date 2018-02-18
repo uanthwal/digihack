@@ -36,7 +36,8 @@
   </div>
   <div class="block">
     <p>Frequency</p>
-    <div *ngFor="let f of frequency" class="chip" (click)="onClickChip(f)">
+    <div *ngFor="let f of frequency" class="chip" 
+      [class.is-active]="f.isActive" (click)="onClickChip(f)">
       {{f.name}}
     </div>
   </div>

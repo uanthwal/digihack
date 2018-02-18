@@ -52,8 +52,11 @@ export class ReminderDetailPage {
     this.dataSelected = true;
   }
 
-  onClickChip(f?) {
-    this.freqSelected = f;
+  onClickChip(freq) {
+    this.freqSelected = freq;
+    const index = this.frequency.indexOf(freq);
+    this.frequency.forEach(t => t.isActive = false);
+    this.frequency[index].isActive = true;
   }
 
   onCickSave() {

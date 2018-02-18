@@ -22,9 +22,13 @@ export class RemindersPage {
    }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad RemindersPage");
     this.remindersList = JSON.parse(localStorage.getItem('reminders'));
   }
+
+  ionViewWillEnter() {
+    this.remindersList = JSON.parse(localStorage.getItem('reminders'));  
+  }
+
   openNewRemindersPage() {
     this.navCtrl.push(ReminderDetailPage);
   }
