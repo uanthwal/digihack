@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { URL_CONFIG } from '../../app/app.config';
-import { RequestDetailPage } from './request-detail';
+import { RequestDetailPage } from '../request-detail/request-detail';
 
 /**
  * Generated class for the RequestPage page.
@@ -112,6 +112,14 @@ export class RequestPage {
     }
   ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.UPIList = this.UPIList.map((ul: any) => {
+      ul.icon = 'avtr--' + Math.floor(Math.random() * 215);
+      return ul;
+    });
+    this.contactList = this.contactList.map((ul: any) => {
+      ul.icon = 'avtr--' + Math.floor(Math.random() * 215);
+      return ul;
+    });
   }
 
   ionViewDidLoad() {

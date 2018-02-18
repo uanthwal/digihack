@@ -22,6 +22,7 @@ export class TransactionsPage {
 public userTransactionDetails: any;
 
   public transactionType: string = 'all';
+  public filterTransaction = [];
   public selectedAccount: any;
   public selectedTransictionDetails: any = {};
 
@@ -39,6 +40,13 @@ public userTransactionDetails: any;
   public doughnutChartDataD:number[] = [];
   public doughnutChartType:string = 'doughnut';
 
+  public dateFormat = 'MMM DD YYYY';
+public today = new Date();
+public filterdate = {
+  to: [this.formatDate(this.today.getFullYear()), this.formatDate(this.today.getMonth() + 1), this.formatDate(this.today.getDate())].join('-'),
+  from: [this.formatDate(this.today.getFullYear()), this.formatDate(this.today.getMonth()), this.formatDate(this.today.getDate())].join('-')
+};
+// this.today.setMonth(this.toDate.getMonth() - 1)  
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -53,7 +61,8 @@ public userTransactionDetails: any;
           this.allAccount = this.userTransactionDetails.map(acc => acc.accountnumber);
           this.selectedAccount = this.allAccount[0];
           this.selectedTransictionDetails = JSON.parse(JSON.stringify(this.userTransactionDetails[0]));
-          this.showTransaction = this.selectedTransictionDetails.transaction.length > 0;
+          this.filterTransaction =  this.doFilterDateTr(this.selectedTransictionDetails.transaction);
+          this.showTransaction = this.filterTransaction.length > 0;
           this.onTransactionTypeChange(this.transactionType);
           this.requestCount--;
           
@@ -61,6 +70,37 @@ public userTransactionDetails: any;
       this.presentLoading();      
   }
 
+public applyFilter() {
+  this.filterTransaction = this.doFilterDateTr(this.filterTransaction);
+  this.showTransaction = this.filterTransaction.length > 0;
+}
+
+public getTran() {
+  let result;
+  if (this.transactionType == 'all') { 
+    result = this.filterTransaction;
+  } else {
+    if (this.transactionType == 'Credit') { 
+    result = this.filterTransaction.filter(tr => tr.type == 'Credit');
+  } else {
+        result = this.filterTransaction.filter(tr => tr.type == 'Debit');
+  }
+  }
+  return result;
+}
+  private doFilterDateTr(tranData: any[]): any[] {
+    let todate = new Date(this.filterdate.to).getTime();
+    let fromdate = new Date(this.filterdate.from).getTime();
+    let result: any[] = this.selectedTransictionDetails.transaction.filter(tran => tran.transactionDate <= fromdate).filter(tran2 => tran2.transactionDate >= todate);
+    return JSON.parse(JSON.stringify(tranData));
+  }
+
+private formatDate(value) {
+  if(parseInt(value) < 10) {
+    return '0' + value;
+  }
+  return value;
+}
     private presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
@@ -69,11 +109,14 @@ public userTransactionDetails: any;
     loader.present();
   }
 
+  
+
   public accountChange(valueChange) {
     console.log("valueChange",valueChange);
     let acc = this.userTransactionDetails.find(account => account.accountnumber == valueChange);
     this.selectedTransictionDetails = JSON.parse(JSON.stringify(acc));
-    this.showTransaction = this.selectedTransictionDetails.transaction.length > 0;
+this.filterTransaction =  this.doFilterDateTr(this.selectedTransictionDetails.transaction);
+          this.showTransaction = this.filterTransaction.length > 0;
   }
 
     // events
@@ -87,13 +130,14 @@ public userTransactionDetails: any;
 
   public onTransactionTypeChange(trType: string) {
     switch (trType) {
-      case 'credit':
-      this.doughnutChartLabelsC = this.selectedTransictionDetails.transaction
-                                    .filter(tranType => tranType.type == 'c')
+      case 'Credit':
+      this.doughnutChartLabelsC = this.filterTransaction
+                                    .filter(tranType => tranType.type == 'Credit')
                                     .map(tranCategory => tranCategory.category);
-      this.doughnutChartDataC = []; 
+      this.doughnutChartDataC = [];
+      this.doughnutChartLabelsC = this.removeDuplicates(this.doughnutChartLabelsC); 
             this.doughnutChartLabelsC.forEach(label => {
-        let total = this.selectedTransictionDetails.transaction
+        let total = this.filterTransaction
                     .filter(tranType => tranType.category == label)
                     .reduce((a, b) => a + b.amount, 0);
                     this.doughnutChartDataC.push(total);
@@ -101,27 +145,29 @@ public userTransactionDetails: any;
       });
       // hack
       // this.doughnutChartLabelsC = this.doughnutChartLabelsC.map((label, index) => label  + '(' + this.doughnutChartDataC[index] +  ')' );
-      break;
-      case 'debit':
-      this.doughnutChartLabelsD = this.selectedTransictionDetails.transaction
-                                    .filter(tranType => tranType.type == 'd')
+      // break;
+      case 'Debit':
+      this.doughnutChartLabelsD = this.filterTransaction
+                                    .filter(tranType => tranType.type == 'Debit')
                                     .map(tranCategory => tranCategory.category);
+      this.doughnutChartLabelsD = this.removeDuplicates(this.doughnutChartLabelsD);
       this.doughnutChartDataD = []; 
       this.doughnutChartLabelsD.forEach(label => {
-        let total = this.selectedTransictionDetails.transaction
+        let total = this.filterTransaction
                     .filter(tranType => tranType.category == label)
                     .reduce((a, b) => a + b.amount, 0);
                     this.doughnutChartDataD.push(total);
       });
 // hack
       // this.doughnutChartLabelsD = this.doughnutChartLabelsD.map((label, index) => label  + '(' + this.doughnutChartDataD[index] +  ')' );
-      break;
+      // break;
       default:
       this.doughnutChartLabels = ['Credit', 'Debit'];
       this.doughnutChartData = [];
-      this.doughnutChartLabels.forEach(label => {
-        let total = this.selectedTransictionDetails.transaction
-                    .filter(tranType => tranType.category == label)
+      
+      ['Credit', 'Debit'].forEach(label => {
+        let total = this.filterTransaction
+                    .filter(tranType => tranType.type == label)
                     .reduce((a, b) => a + b.amount, 0);
                     this.doughnutChartData.push(total);
       });
@@ -132,5 +178,15 @@ public userTransactionDetails: any;
     this.transactionType = trType;
 
   }
+
+  private removeDuplicates(arr){
+    let unique_array = []
+    for(let i = 0;i < arr.length; i++){
+        if(unique_array.indexOf(arr[i]) == -1){
+            unique_array.push(arr[i])
+        }
+    }
+    return unique_array
+}
 
 }

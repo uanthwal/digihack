@@ -32,7 +32,7 @@ import { DealsPage } from '../pages/deals/deals';
 import { RechargePage } from '../pages/recharge/recharge';
 import { PayeesPage } from '../pages/payees/payees';
 import { NewDepositPage } from '../pages/new-deposit/new-deposit';
-import { RemindersPage, AddNewRemindersPage } from '../pages/reminders/reminders';
+import { RemindersPage } from '../pages/reminders/reminders';
 import { TransactionsPage } from '../pages/transactions/transactions';
 import { ChatBotPage } from '../pages/chat-bot/chat-bot';
 import { InviteAndEarnPage } from '../pages/invite-and-earn/invite-and-earn';
@@ -46,7 +46,8 @@ import { QRScanner } from '@ionic-native/qr-scanner';
 import { QRCodeModule } from 'angular2-qrcode';
 import { SplitBillPage } from '../pages/split-bill/split-bill';
 import { SplitBillDetailPage } from '../pages/split-bill/split-bill-detail';
-import { RequestDetailPage } from '../pages/request/request-detail';
+import { RequestDetailPage } from '../pages/request-detail/request-detail';
+import { ReminderDetailPage } from '../pages/reminder-detail/reminder-detail';
 import { TransferDetailsPage } from '../pages/transfer-details/transfer-details';
 
 const PAGES = [
@@ -55,8 +56,7 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
-  AddNewRemindersPage, TransferDetailsPage, RequestDetailPage, SplitBillPage, 
-  SplitBillDetailPage, QrCodeGeneratorPage
+  ReminderDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage, TransferDetailsPage 
 ];
 @NgModule({
   declarations: PAGES,

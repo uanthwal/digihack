@@ -4,67 +4,67 @@
         "currency": "INR",
         "transaction": [{
                 "id": 1,
-                "type": "d",
+                "type": "Debit",
                 "amount": 10,
                 "category": "Food",
                 "comment": "Snack",
-                "transactionDate": 1518863213065
+                "transactionDate": 1516233600000
             },
             {
                 "id": 2,
-                "type": "c",
+                "type": "Credit",
                 "amount": 50000,
                 "category": "Salary",
                 "comment": "Feb Salary",
-                "transactionDate": 1518863213065
+                "transactionDate": 1516233600000
             },
             {
                 "id": 3,
-                "type": "c",
+                "type": "Credit",
                 "amount": 1000,
                 "category": "Other",
                 "comment": "Raj payback",
-                "transactionDate": 1518863213065
+                "transactionDate": 1516233600000
             },
             {
                 "id": 4,
-                "type": "d",
+                "type": "Debit",
                 "amount": 100,
                 "category": "Recharge",
                 "comment": "My mobile",
-                "transactionDate": 1518863213065
+                "transactionDate": 1516233600000
             },
             {
                 "id": 5,
-                "type": "d",
+                "type": "Debit",
                 "amount": 10,
                 "category": "Other",
                 "comment": "Parking",
-                "transactionDate": 1518863213065
+                "transactionDate": 1516233600000
             },
             {
                 "id": 7,
-                "type": "c",
+                "type": "Credit",
                 "amount": 100,
                 "category": "Food",
                 "comment": "Snack",
-                "transactionDate": 1518863213065
+                "transactionDate": 1516233600000
             },
             {
                 "id": 8,
-                "type": "c",
+                "type": "Credit",
                 "amount": 1000,
                 "category": "Food",
                 "comment": "Snack",
-                "transactionDate": 1518863213065
+                "transactionDate": 1516233600000
             },
             {
                 "id": 9,
-                "type": "d",
+                "type": "Debit",
                 "amount": 10000,
                 "category": "Transfer",
                 "comment": "My Dad",
-                "transactionDate": 1518863213065
+                "transactionDate": 1516233600000
             }
         ]
     },

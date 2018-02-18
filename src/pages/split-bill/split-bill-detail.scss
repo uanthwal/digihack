@@ -1,4 +1,67 @@
 page-split-bill-detail {
+  .scroll-content {
+    background: #f8f8f8;
+    padding: 0 !important;
+  }
+  .block {
+    padding-left: 16px;
+    margin: 16px 0;
+    background: white;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    .amt-input {
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+    }
+    .amt-input::-webkit-input-placeholder {
+      font-size: 20px;
+    }
+    .cal {
+      padding-left: 0;
+    }
+    textarea {
+      height: 100px;
+      width: 96%;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 7px;
+    }
+    .user-info {
+      display: flex;
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+
+      img {
+        height: 60px;
+      }
+      .name {
+        padding-left: 10px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        p {
+          margin: 0;
+        }
+      }
+      .name-1 {
+        padding-left: 10px;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .fa-icon {
+    padding-right: 20px;
+    font-size: 20px;
+  }
   .user-info {
     display: flex;
     padding-top: 10px;
@@ -32,7 +95,7 @@ page-split-bill-detail {
   }
 
   .name-icon {
-    border: 1px solid black;
+    color: white;
     border-radius: 50%;
     padding: 14px;
   }

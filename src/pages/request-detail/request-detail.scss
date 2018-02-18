@@ -1,7 +1,10 @@
-page-transfer-details {
+page-request-detail {
   .scroll-content {
     padding: 0 !important;
     background: #f8f8f8;
+    > div:first-child {
+      padding: 0 !important;
+    }
   }
   .block {
     padding-left: 16px;
@@ -58,15 +61,18 @@ page-transfer-details {
       }
     }
   }
+  .b2 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
   .user-info {
     display: flex;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
+    background: white;
 
     img {
-      height: 60px;
-      width: 60px;
+      height: 55px;
+      width: 55px;
     }
     .name {
       padding-left: 10px;
@@ -77,22 +83,20 @@ page-transfer-details {
         margin: 0;
       }
       .c-name {
-        font-size: 18px;
+        font-size: 17px;
       }
       .c-num {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
   }
 
   .name-icon {
-    color: white;
     border-radius: 50%;
     padding: 14px;
+    color: white;
   }
-  .fa-icon {
-    font-size: 20px;
-  }
+
   .bank-list {
     .label.label-md {
       display: flex;
@@ -110,7 +114,6 @@ page-transfer-details {
 
     .fa-check-circle {
       color: darken(#fff, 10%);
-      font-size: 25px;
       &.check {
         color: green;
       }

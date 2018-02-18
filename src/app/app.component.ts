@@ -11,14 +11,17 @@ import { RemindersPage } from '../pages/reminders/reminders';
 import { RequestPage } from '../pages/request/request';
 import { SplitBillPage } from '../pages/split-bill/split-bill';
 
+import { TransactionsPage } from '../pages/transactions/transactions';
+
 @Component({
   templateUrl: "app.html"
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   public iconPath = URL_CONFIG.ICON_ASSETS_PATH;
+
   rootPage: any = IntroSliderPage;
-  // rootPage: any = TransferPage;
+
 
   pages: Array<{ title: string; component: any; icon: string }>;
 
