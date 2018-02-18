@@ -35,7 +35,10 @@
                 <ion-label>To</ion-label>
                 <ion-datetime displayFormat="{{dateFormat}}" [(ngModel)]="filterdate.to"></ion-datetime>
             </ion-item>
-            <button ion-button full (click)="applyFilter()">Apply Filter</button>
+            <div class="apply-filter-btn">
+                    <button ion-button round (click)="applyFilter()">Apply Filter</button>
+            </div>
+            
         </div>
         <div *ngIf="showTransaction">
             <div class="chart-section"></div>
