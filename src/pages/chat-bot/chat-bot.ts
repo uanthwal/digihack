@@ -36,12 +36,17 @@ export class ChatBotPage {
       q: this.askQuery,
       qt: new Date()
     };
-    result = this.chatData.find(data => data.tag.search(new RegExp(this.askQuery, "i")) !== -1);
-    query.a = result ? result.a : 'Sorry query not found \n please contact our customer care';
-    query.at = new Date();
-    this.chatHistory.push(query);
-    this.askQuery = '';
     
+    let ask = this.askQuery;
+    this.askQuery = '';
+    this.chatHistory.push(query);
+    setTimeout(() => {
+          result = this.chatData.find(data => data.tag.search(new RegExp(ask, "i")) !== -1);
+          query.a = result ? result.a : 'Sorry query not found \n please contact our customer care';
+          query.at = new Date();
+          this.chatHistory.pop();
+          this.chatHistory.push(query);
+    }, 1000);    
     
   }
 
