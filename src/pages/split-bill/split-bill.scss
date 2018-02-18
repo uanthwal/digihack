@@ -2,7 +2,7 @@ page-split-bill {
   .scroll-content {
     padding: 0 !important;
     background: #f8f8f8;
-     >div:first-child{
+    > div:first-child {
       padding: 0 !important;
     }
   }
@@ -49,5 +49,9 @@ page-split-bill {
     &.check {
       color: green;
     }
+  }
+  .trn-btn {
+    display: flex;
+    justify-content: center;
   }
 }

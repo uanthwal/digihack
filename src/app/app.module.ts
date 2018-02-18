@@ -45,10 +45,10 @@ import { TransactionSummaryService } from '../service/transaction-summary-servic
 import { QRScanner } from '@ionic-native/qr-scanner';
 import { QRCodeModule } from 'angular2-qrcode';
 import { SplitBillPage } from '../pages/split-bill/split-bill';
-import { TransferDetailPage } from '../pages/transfer/transfer-detail';
 import { SplitBillDetailPage } from '../pages/split-bill/split-bill-detail';
-import { RequestDetailPage } from '../pages/request/request-detail';
-import { ReminderDetailPage } from '../pages/reminders/reminder-detail';
+import { RequestDetailPage } from '../pages/request-detail/request-detail';
+import { ReminderDetailPage } from '../pages/reminder-detail/reminder-detail';
+import { TransferDetailsPage } from '../pages/transfer-details/transfer-details';
 
 const PAGES = [
   MyApp, HomePage, LoginPage, LogoutPage, IntroSliderPage,
@@ -56,8 +56,7 @@ const PAGES = [
   RechargePage, RequestPage, PayeesPage, MutualFundsPage, 
   NewDepositPage, RemindersPage, MyAccountPage, TransactionsPage,
   ChatBotPage, InviteAndEarnPage, NotificationsPage, DashboardPage,
-  ReminderDetailPage, TransferDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage
-  
+  ReminderDetailPage, RequestDetailPage, SplitBillPage, SplitBillDetailPage, TransferDetailsPage 
 ];
 @NgModule({
   declarations: PAGES,

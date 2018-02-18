@@ -1,3 +1,18 @@
 page-recharge {
+  .scroll-content {
+    background-color: #F8F8F8;
+  }
 
+  ion-segment {
+    margin-bottom: 10px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  ion-card {
+    background-color: #fff;
+  }
 }

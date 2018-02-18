@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { URL_CONFIG } from '../../app/app.config';
-import { RequestDetailPage } from './request-detail';
+import { RequestDetailPage } from '../request-detail/request-detail';
 
 /**
  * Generated class for the RequestPage page.

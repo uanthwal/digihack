@@ -14,6 +14,8 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RechargePage {
 
+  public rechargeType = 'prepaid';
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

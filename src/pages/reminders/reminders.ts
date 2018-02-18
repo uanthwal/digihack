@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { URL_CONFIG } from "../../app/app.config";
-import { ReminderDetailPage } from "./reminder-detail";
+import { ReminderDetailPage } from "../reminder-detail/reminder-detail";
 
 /**
  * Generated class for the RemindersPage page.

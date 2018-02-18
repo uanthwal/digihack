@@ -1,7 +1,7 @@
-page-split-bill-detail {
+page-transfer-details {
   .scroll-content {
-    background: #f8f8f8;
     padding: 0 !important;
+    background: #f8f8f8;
   }
   .block {
     padding-left: 16px;
@@ -58,20 +58,12 @@ page-split-bill-detail {
       }
     }
   }
-  .fa-icon {
-    padding-right: 20px;
-    font-size: 20px;
-  }
   .user-info {
     display: flex;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    width: 100%;
-    align-items: center;
-    i {
-      font-size: 30px;
-    }
+
     img {
       height: 60px;
       width: 60px;
@@ -81,7 +73,6 @@ page-split-bill-detail {
       justify-content: center;
       display: flex;
       flex-direction: column;
-      flex: 1;
       p {
         margin: 0;
       }
@@ -95,15 +86,36 @@ page-split-bill-detail {
   }
 
   .name-icon {
-    color: white;
+    border: 1px solid black;
     border-radius: 50%;
     padding: 14px;
   }
 
-  .fa-check-circle {
-    color: darken(#fff, 10%);
-    &.check {
-      color: green;
+  .bank-list {
+    .label.label-md {
+      display: flex;
+      img {
+        max-width: 100%;
+        border: 0;
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+      }
+      span {
+        flex: 1;
+      }
     }
+
+    .fa-check-circle {
+      color: darken(#fff, 10%);
+      font-size: 25px;
+      &.check {
+        color: green;
+      }
+    }
+  }
+  .trn-btn {
+    display: flex;
+    justify-content: center;
   }
 }
