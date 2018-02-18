@@ -26,12 +26,15 @@ export class SplitBillDetailPage {
   }
 
   splitBill(amount) {
-      if(amount > 0) {
-        let perHeadCost = (amount/this.selectedBillers.length);
-        this.selectedBillers.forEach(i => {
-            i.amountToPay = perHeadCost;
-        });
-      }
-    
+    if(amount > 0) {
+      let perHeadCost = (amount/this.selectedBillers.length);
+      this.selectedBillers.forEach(i => {
+          i.amountToPay = perHeadCost.toFixed(2);
+      });
+    }
+  }
+
+  onClickCard(b) {
+    console.log('Biller clicked ', b)
   }
 }
