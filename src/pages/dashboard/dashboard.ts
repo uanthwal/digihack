@@ -30,9 +30,8 @@ export class DashboardPage {
 
   constructor(public navCtrl: NavController) {
   }
-
+    // { label: 'Offers', icon: 'water', page: DealsPage },
   public tabMenus = [
-    { label: 'Offers', icon: 'water', page: DealsPage },
     { label: 'My Account', icon: 'water', page: MyAccountPage },
     { label: 'Home', icon: 'water', page: HomePage },
     { label: 'Transactions', icon: 'water', page: TransactionsPage },

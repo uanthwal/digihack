@@ -64,7 +64,11 @@
             </div>
             <div>
                 <div class="each-tran" *ngFor="let eachTran of getTran()">
-                    <ion-item>
+                    <div class="display-data">
+                        <label>Transaction Category:</label>
+                        <div>{{eachTran.category}}</div>
+                    </div>
+                    <!--<ion-item>
                         <ion-label style="width: 100%; max-width:100%">Catrgoty</ion-label>
                         <ion-select *ngIf="eachTran.type == 'Credit'" style="max-width:100%" [(ngModel)]="eachTran.category">
                             <ion-option *ngFor="let cate of doughnutChartLabelsC" value="{{cate}}">{{cate}}</ion-option>
@@ -72,7 +76,7 @@
                         <ion-select *ngIf="eachTran.type == 'Debit'" style="max-width:100%" [(ngModel)]="eachTran.category">
                             <ion-option *ngFor="let cate of doughnutChartLabelsD" value="{{cate}}">{{cate}}</ion-option>
                         </ion-select>
-                    </ion-item>
+                    </ion-item>-->
                     <div class="display-data">
                         <label>Transaction Id:</label>
                         <div>{{eachTran.id}}</div>
