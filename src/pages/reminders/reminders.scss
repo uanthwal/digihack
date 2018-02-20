@@ -103,9 +103,9 @@ page-reminders {
     .user-info {
       display: flex;
       padding: 10px;
-
+      align-items: center;
       img {
-        height: 60px;
+        height: 40px;
       }
       .name {
         padding-left: 10px;

@@ -32,4 +32,10 @@ export class RemindersPage {
   openNewRemindersPage() {
     this.navCtrl.push(ReminderDetailPage);
   }
+
+  removeReminder(r?) {
+    const index = this.remindersList.indexOf(r);
+    this.remindersList.splice(index, 1);
+    localStorage.setItem('reminders', JSON.stringify(this.remindersList));
+  }
 }

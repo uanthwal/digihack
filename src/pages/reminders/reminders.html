@@ -19,13 +19,13 @@
   <div *ngIf="remindersList?.length > 0">
       <div class="infocard" *ngFor="let r of remindersList">
           <div class="user-info">
-              <img src="{{iconPath}}in-love.png"/>
+              <img src="{{iconPath}}reminder-suer.png"/>
               <div class="name">
                 <p>{{r.reminder_data.participant.name}}</p>
                 <p>{{r.reminder_data.participant.data}}</p>
               </div>
               <div class="name-1">
-                  <p><i class="fa fa-trash"></i></p>
+                  <p><i class="fa fa-trash" (click)="removeReminder(r)"></i></p>
                   <p><button ion-button round class="pay-btn">PAY</button></p>
                 </div>
             </div>
